@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantilla inicial de JavaScript</title>
+  <link rel="stylesheet" href="../recursos/estilos-base.css">
+  <link rel="stylesheet" href="estilos.css">
+  <!-- defer: el navegador descarga app.js mientras lee el HTML y lo ejecuta cuando la página ya está lista -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <h1>Plantilla inicial</h1>
+      <span class="insignia">JavaScript</span>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section>
+      <h2>Mi primera página con JavaScript</h2>
+      <p>Abre la consola del navegador con la tecla F12 (pestaña Console) y pulsa el botón.</p>
+
+      <button type="button" class="boton" id="boton-probar">Probar JavaScript</button>
+      <p id="mensaje" role="status" aria-live="polite">Todavía no has pulsado el botón.</p>
+
+      <img src="img/cafe-1.svg" alt="Taza de café humeante" width="240" height="160">
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">Taller de JavaScript · plantilla inicial</div>
+  </footer>
+</body>
+</html>

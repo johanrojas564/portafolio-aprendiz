@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depurar: promedio de notas</title>
+  <link rel="stylesheet" href="recursos/estilos-base.css">
+  <script src="ejercicio-1.7-corregido.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor"><h1>Promedio de notas</h1></div>
+  </header>
+
+  <main class="contenedor">
+    <p>Notas del estudiante: <strong>3.0, 4.0, 2.8, 4.5 y 5.0</strong>. Se aprueba con 3.0 o más.</p>
+    <p><button type="button" class="boton" id="boton-calcular">Calcular</button></p>
+
+    <ul id="resultados" role="status" aria-live="polite">
+      <li>Promedio: <span id="res-promedio">sin calcular</span></li>
+      <li>Notas aprobadas: <span id="res-aprobadas">sin calcular</span></li>
+      <li>Mejor nota: <span id="res-mejor">sin calcular</span></li>
+    </ul>
+  </main>
+</body>
+</html>

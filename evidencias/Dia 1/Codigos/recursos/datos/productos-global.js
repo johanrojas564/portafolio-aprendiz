@@ -1,0 +1,135 @@
+// Misma carta de Café Aroma, como script clásico para abrir las páginas con doble clic (Día 3).
+// Define la constante global PRODUCTOS.
+const PRODUCTOS = [
+  {
+    "id": 1,
+    "nombre": "Espresso",
+    "categoria": "bebidas-calientes",
+    "precio": 6500,
+    "descripcion": "Café corto e intenso, preparado con granos de origen colombiano.",
+    "imagen": "img/cafe-1.svg",
+    "disponible": true,
+    "etiquetas": [
+      "vegano"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Capuchino",
+    "categoria": "bebidas-calientes",
+    "precio": 9500,
+    "descripcion": "Espresso con leche vaporizada y una capa suave de espuma.",
+    "imagen": "img/cafe-2.svg",
+    "disponible": true,
+    "etiquetas": []
+  },
+  {
+    "id": 3,
+    "nombre": "Latte de vainilla",
+    "categoria": "bebidas-calientes",
+    "precio": 11000,
+    "descripcion": "Café con mucha leche cremosa y un toque de vainilla natural.",
+    "imagen": "img/cafe-2.svg",
+    "disponible": true,
+    "etiquetas": []
+  },
+  {
+    "id": 4,
+    "nombre": "Chocolate caliente",
+    "categoria": "bebidas-calientes",
+    "precio": 8500,
+    "descripcion": "Chocolate de origen derretido en leche, servido bien caliente.",
+    "imagen": "img/cafe-3.svg",
+    "disponible": true,
+    "etiquetas": [
+      "sin-cafeina"
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Café frío (cold brew)",
+    "categoria": "bebidas-frias",
+    "precio": 10500,
+    "descripcion": "Café infusionado en frío durante 12 horas, servido con hielo.",
+    "imagen": "img/cafe-1.svg",
+    "disponible": true,
+    "etiquetas": [
+      "vegano"
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Limonada de coco",
+    "categoria": "bebidas-frias",
+    "precio": 9000,
+    "descripcion": "Limón fresco con crema de coco, muy refrescante.",
+    "imagen": "img/cafe-3.svg",
+    "disponible": true,
+    "etiquetas": [
+      "sin-cafeina",
+      "vegano"
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Frappé de caramelo",
+    "categoria": "bebidas-frias",
+    "precio": 12500,
+    "descripcion": "Café helado batido con caramelo y crema chantilly.",
+    "imagen": "img/cafe-2.svg",
+    "disponible": false,
+    "etiquetas": []
+  },
+  {
+    "id": 8,
+    "nombre": "Brownie con helado",
+    "categoria": "postres",
+    "precio": 12000,
+    "descripcion": "Brownie tibio de chocolate con una bola de helado de vainilla.",
+    "imagen": "img/cafe-3.svg",
+    "disponible": true,
+    "etiquetas": []
+  },
+  {
+    "id": 9,
+    "nombre": "Cheesecake de maracuyá",
+    "categoria": "postres",
+    "precio": 13500,
+    "descripcion": "Base de galleta, queso crema y cobertura de maracuyá.",
+    "imagen": "img/cafe-1.svg",
+    "disponible": true,
+    "etiquetas": []
+  },
+  {
+    "id": 10,
+    "nombre": "Croissant de mantequilla",
+    "categoria": "panaderia",
+    "precio": 7500,
+    "descripcion": "Hojaldrado y horneado cada mañana con mantequilla.",
+    "imagen": "img/cafe-2.svg",
+    "disponible": true,
+    "etiquetas": []
+  },
+  {
+    "id": 11,
+    "nombre": "Pan de bono (3 unidades)",
+    "categoria": "panaderia",
+    "precio": 6000,
+    "descripcion": "Tradicional pan de queso y almidón de yuca, sin gluten.",
+    "imagen": "img/cafe-1.svg",
+    "disponible": true,
+    "etiquetas": [
+      "sin-gluten"
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Sándwich de pollo y pesto",
+    "categoria": "panaderia",
+    "precio": 15500,
+    "descripcion": "Pan artesanal con pollo desmechado, pesto y queso mozzarella.",
+    "imagen": "img/cafe-3.svg",
+    "disponible": false,
+    "etiquetas": []
+  }
+];

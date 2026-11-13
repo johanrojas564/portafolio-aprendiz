@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantilla inicial de JavaScript</title>
+  <link rel="stylesheet" href="../recursos/estilos-base.css">
+  <link rel="stylesheet" href="estilos.css">
+  <!-- defer: el navegador descarga app.js mientras lee el HTML y lo ejecuta cuando la página ya está lista -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <h1>Plantilla inicial</h1>
+      <span class="insignia">JavaScript</span>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section>
+      <form action="#" method="post" >
+        <label for="cuenta"> Valor de la cuenta (COP) </label>
+        <input type="number" name="cuenta" id="cuenta" required> 
+        <p role="alert" id="error_cuenta"></p>
+        <p role="status"></p>
+        <label for="porcentaje"> porcentaje </label>
+        <select name="porcentaje" id="porcentaje"> 
+          <option value="0"> 0%</option>
+          <option value="10"> 10% </option>
+          <option value="15"> 15%</option>
+          <option value="20">20%</option>
+        </select>
+        <button type="submit" id ="boton_calcular "> Calcular </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">Taller de JavaScript · plantilla inicial</div>
+  </footer>
+</body>
+</html>

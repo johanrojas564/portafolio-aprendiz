@@ -1,0 +1,7 @@
+/* estilos.css · Estilos propios de tu proyecto.
+   Los estilos generales vienen de ../recursos/estilos-base.css; aquí solo añades lo tuyo. */
+
+#mensaje {
+  font-weight: 700;
+  color: var(--color-primario);
+}

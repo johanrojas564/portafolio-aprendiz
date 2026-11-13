@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio #4 Guiado </title>
+  <link rel="stylesheet" href="../recursos/estilos-base.css">
+  <link rel="stylesheet" href="estilos.css">
+  <!-- defer: el navegador descarga app.js mientras lee el HTML y lo ejecuta cuando la página ya está lista -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <h1>Ejercicio Guiado #4 </h1>
+      <span class="insignia">JavaScript</span>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section>
+       <h2>Tazas servidas hoy</h2> 
+       <p>Pulsa los botones para cambiar el contador. Mira también la consola (F12).</p>
+
+      <p>Valor actual: <strong id="valor" role="status" aria-live="polite">0</strong></p> 
+   
+       <p> <button type="button" class="boton" id="boton-sumar">Sumar 1</button>         
+        <button type="button" class="boton boton--secundario" id="boton-restar">Restar 1</button>         
+        <button type="button" class="boton boton--peligro" id="botonreiniciar">Reiniciar</button>       
+      </p> 
+      <p id="aviso-limite" class="campo__error"></p> 
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">Taller de JavaScript · plantilla inicial</div>
+  </footer>
+</body>
+</html>
