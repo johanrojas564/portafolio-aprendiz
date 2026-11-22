@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nueva contraseña - JAD Mathy</title>
+
+  <!-- CSS universal -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- ==========================================
+       CONTENEDOR PRINCIPAL
+       ========================================== -->
+
+  <div class="element-login-light">
+
+
+    <!-- ==========================================
+         PANEL IZQUIERDO - IDENTIDAD MATHY
+         ========================================== -->
+
+    <aside class="brand-banner">
+
+      <!-- Decoraciones matemáticas -->
+
+      <div class="math-decorations" aria-hidden="true">
+
+        <div class="math-badge plus">+</div>
+        <div class="math-badge minus">-</div>
+        <div class="math-badge divide">÷</div>
+        <div class="math-badge multiply">×</div>
+        <div class="math-badge pi">π</div>
+
+      </div>
+
+
+      <!-- Presentación de la plataforma -->
+
+      <section class="brand-content">
+
+        <img
+          class="brand-logo"
+          src="img/LOGO MATHY VERTICAL_SIN FONDO.webp"
+          alt="Logo de JAD Mathy"
+        >
+
+        <h1 class="brand-title">
+          ¡Aprender matemáticas nunca fue tan divertido!
+        </h1>
+
+        <p class="brand-description">
+          Explora desafíos interactivos, medallas increíbles
+          y sube de nivel junto a JAD el zorro matemático.
+          Pensado para jóvenes de 8 a 15 años.
+        </p>
+
+      </section>
+
+
+      <!-- Etiquetas informativas -->
+
+      <div class="brand-tags">
+
+        <span class="tag">
+          Edad 8-15 años
+        </span>
+
+        <span class="brand-tag-text">
+          Metodología gamificada certificada
+        </span>
+
+      </div>
+
+    </aside>
+
+
+    <!-- ==========================================
+         PANEL DERECHO - NUEVA CONTRASEÑA
+         ========================================== -->
+
+    <main class="login-container password-container">
+
+
+      <!-- Encabezado -->
+
+      <header class="password-header">
+
+        <img
+          class="form-header-logo"
+          src="img/LOGO-MATHY-ORIGINAL_SINFONDO-.webp"
+          alt="Isotipo de JAD Mathy"
+        >
+
+        <div class="form-title-group">
+
+          <h2 class="form-title">
+            Ingrese la nueva contraseña
+          </h2>
+
+          <p class="form-subtitle">
+            Crea una clave que sea fácil de recordar
+            pero segura.
+          </p>
+
+        </div>
+
+      </header>
+
+
+      <!-- ==========================================
+           FORMULARIO DE NUEVA CONTRASEÑA
+           ========================================== -->
+
+      <form class="login-form password-form">
+
+
+        <!-- Nota informativa -->
+
+        <div class="password-notice">
+
+          <span>
+            Nota: Debe tener entre 8 a 16 caracteres
+          </span>
+
+        </div>
+
+
+        <!-- Nueva contraseña -->
+
+        <div class="input-group">
+
+          <label class="input-label" for="new-password">
+            Nueva contraseña
+          </label>
+
+          <div class="input-wrapper">
+
+            <input
+              type="password"
+              id="new-password"
+              name="new-password"
+              class="text-input"
+              placeholder="nuevaClave123"
+              minlength="8"
+              maxlength="16"
+              required
+            >
+
+            <img
+              class="input-icon"
+              src="https://c.animaapp.com/QOnBXDNZ/img/eye.svg"
+              alt="Mostrar u ocultar contraseña"
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- Confirmar contraseña -->
+
+        <div class="input-group">
+
+          <label class="input-label" for="confirm-password">
+            Confirmar contraseña
+          </label>
+
+          <div class="input-wrapper">
+
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              class="text-input"
+              placeholder="nuevaClave123"
+              minlength="8"
+              maxlength="16"
+              required
+            >
+
+            <img
+              class="input-icon"
+              src="https://c.animaapp.com/QOnBXDNZ/img/eye.svg"
+              alt="Mostrar u ocultar contraseña"
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- Botón verificar -->
+
+        <button
+          type="button"
+          class="btn-secondary"
+        >
+          Verificar
+        </button>
+
+
+        <!-- Estado de verificación -->
+
+        <div class="verification-status">
+
+          <span>✓</span>
+
+          <span>
+            Verificación exitosa
+          </span>
+
+        </div>
+
+
+        <!-- Botón enviar -->
+
+        <button
+          type="submit"
+          class="btn-primary"
+        >
+          Enviar
+        </button>
+
+
+      </form>
+
+    </main>
+
+  </div>
+
+</body>
+
+</html>
