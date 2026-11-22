@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid en acción</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 1.5rem;
+      background-color: #f1f5f9;
+    }
+
+    h2 { margin: 2rem 0 0.5rem; }
+
+    .cuadricula {
+      display: grid;
+      gap: 12px;
+      background-color: #cbd5e1;
+      padding: 12px;
+    }
+    .galeria{
+      grid-column: 1/1;
+      gap: 8px;
+    }
+
+    .celda {
+      background-color: #0d9488;
+      color: #ffffff;
+      padding: 1.5rem 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    /* Tres columnas del mismo ancho: la unidad fr reparte el espacio disponible */
+    .tres-columnas {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Columnas de distinto tamaño */
+    .mixtas {
+      grid-template-columns: 300px 1fr; /*En el primer caso las 3 columnas se alinean de forma veritcal*/
+
+    }
+
+    /* Filas con altura definida */
+    .con-filas {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 80px 140px;
+    }
+
+    /* Un elemento que ocupa varias columnas */
+    .ancha {
+      grid-column: span 2;
+      background-color: #f97316;
+    }
+
+    /* Disposición clásica de página */
+    .pagina {
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto auto auto;
+    }
+    .pagina .cabecera, .pagina .pie { grid-column: 1 / -1; background-color: #475569; }
+    .pagina .lateral { background-color: #7c3aed; }
+    .nueva{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Grid: ejemplos</h1>
+
+  <h2>repeat(3, 1fr)</h2>
+  <div class="cuadricula tres-columnas">
+    <div class="celda">1</div><div class="celda">2</div><div class="celda">3</div>
+    <div class="celda">4</div><div class="celda">5</div><div class="celda">6</div>
+    <div class="celda">7</div><div class="celda">8</div>
+  </div>
+
+  <h2>200px 1fr 2fr</h2>
+  <div class="cuadricula mixtas">
+    <div class="celda">200 px</div><div class="celda">1fr</div><div class="celda">2fr</div>
+  </div>
+
+  <h2>grid-template-rows y grid-column: span 2</h2>
+  <div class="cuadricula con-filas">
+    <div class="celda ancha">Ocupa 2 columnas</div><div class="celda">3</div>
+    <div class="celda">4</div><div class="celda">5</div><div class="celda">6</div>
+  </div>
+
+  <h2>Estructura de página con grid</h2>
+  <div class="cuadricula pagina">
+    <div class="celda cabecera">Cabecera</div>
+    <div class="celda lateral">Lateral</div>
+    <div class="celda">Contenido principal</div>
+    <div class="celda pie">Pie de página</div>
+  </div>
+  <h2>Sección de Galeria  </h2>
+    <div class="cuadricula galeria">
+      <div class="tres-columnas">
+      <div class="celda"> 1</div>
+      <div class="celda"> 2</div>
+      <div class="celda"> 3</div>
+      <div class="celda"> 4</div>
+      <div class="celda"> 5</div>
+      <div class="celda"> 6</div>
+      </div>
+    </div>
+    <h2> Nueva cuadricula</h2>
+    <div class=" cuadricula nueva">
+     
+      <div class="celda"> 1</div>
+      <div class="celda"> 2</div>
+      <div class="celda"> 3</div>
+      <div class="celda"> 4</div>
+      <div class="celda"> 5</div>
+      <div class="celda"> 6</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,425 @@
+/* ==========================================================
+   styles.css - Proyecto final
+   Organiza tu hoja de estilos por secciones, en este orden:
+   1. Variables   2. Base   3. Contenedor y utilidades
+   4. Botones     5. Encabezado y navegación   6. Hero
+   7. Secciones   8. Tarjetas / Servicios      9. Información adicional
+   10. Formulario 11. Pie de página            12. Responsive
+   ========================================================== */
+
+/* 1. VARIABLES */
+:root{
+  --color-oscuro: #111111;        /* Negro profundo para elementos oscuros (header, footer) */
+  --color-primario: #f4f4f4;      /* Gris muy claro para tarjetas o contenedores */
+  --color-secundario: #e0e0e0;    /* Gris secundario para elementos de apoyo o bordes */
+  --color-acento: #ff5500;        /* Naranja vibrante corporativo */
+  --color-acento-oscuro: #cc4400; /* Naranja más oscuro para estados hover o bordes */
+  --color-fondo: #ffffff;         /* Fondo general de la página (Blanco limpio) */
+  --color-fondo-alterno: #f8f9fa; /* Fondo para secciones alternas o inputs */
+  --color-texto: #111111;         /* Negro/carbón para máxima legibilidad */
+  --color-texto-suave: #666666;   /* Gris medio para textos secundarios */
+  --radio: 12px; 
+  --sombra: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra sutil y elegante para fondo claro */
+  --color-texto-claro: #ff5500;   /* Naranja de realce */
+  --color-borde: #e0e0e0;         /* Borde sutil claro */
+}
+
+/* 2. BASE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /*El ancho de los cuadrados contara tambien el margin y el padding*/
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+h1{
+    font-size: 2.5rem ;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+}
+.seccion h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-secundario);
+    border-radius: 999px;
+    margin-top: 0.5rem;
+}
+h3{
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+}
+p{
+    margin: 0 0 1rem;
+}
+a{
+    color: var(--color-acento);
+}
+a:hover{
+    color: var(--color-acento-oscuro);
+    text-decoration: none;
+}
+/*Foco visible para el usuario que este navegando*/
+a:focus-visible, 
+button:focus-visible{
+    outline: 3px var(--color-acento-oscuro);
+    outline-offset: 3px;
+}
+/*3. CONTENEDORES*/
+.contenedor{
+    width: 90% ;
+    max-width: 1000px; 
+    margin: 0 auto;
+    scroll-padding-top: 10rem;
+}
+
+/*4.BOTONES Y ESTADOS*/
+.boton{
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+    transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+.boton:hover{
+    background-color: var(--color-acento-oscuro);
+    color: #ffffff;
+}
+.boton:focus-visible{
+    outline: none;
+    box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px var(--color-texto); 
+}
+.boton:active{
+    transform: translateY(2px);
+}
+/*5.ENCABEZADO Y NAVEGACIÓN */
+.encabezado{
+    background-color: var(--color-oscuro);
+    border-bottom: 1px solid var(--color-borde); /* Línea sutil separadora */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10 ;
+}
+.encabezado .contenedor{
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; 
+  gap: 1.5rem;
+}
+.logo{
+    display: block;
+}
+.logo img{
+    display: block;
+}
+.menu-navegacion ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-navegacion a{
+  display: inline-block; 
+  padding: 0.65rem 1rem; /* antes: 0.5rem 1rem (unos 41,6 px de alto) */ 
+  color:var(--color-primario); 
+  text-decoration: none; 
+  border-radius: 6px; 
+}
+.menu-navegacion a:hover,
+.menu-navegacion a:focus-visible{
+    background-color: var(--color-acento-oscuro);
+    color: #ffffff;
+}
+/*6. PRESENTACIÓN */
+.imagen-hero {
+    background-image:  
+    linear-gradient(rgba(15, 15, 15, 0.9), rgba(26, 26, 26, 0.8)), 
+    url("img/gym-hero.svg");
+    background-size: cover;
+    background-position: center right;
+    background-color: var(--color-oscuro); /* Color de respaldo */
+    color: #ffffff; 
+    min-height: 70vh;
+    display: flex;
+    align-items: center; 
+    padding: 4rem 0;
+}
+.imagen-hero p{ 
+    max-width: 55ch;
+    font-size: 1.125rem;
+    color: var(--color-texto-claro);
+}
+
+/*7.SECCIONES  */
+.seccion{
+    padding: 3rem 0;
+}
+.seccion-clara {
+    background-color: var(--color-fondo-alterno);
+}
+.introduccion{
+    max-width: 60ch;
+    color: var(--color-texto-suave);
+    margin-bottom: 1.5rem;
+}
+/*8. TARJETA/SERVICIOS  */
+.espacio-tarjeta{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.tarjeta { 
+  background-color: var(--color-fondo); 
+  border: 1px solid var(--color-borde); 
+  border-radius: var(--radio); 
+  box-shadow: var(--sombra); 
+  overflow: hidden; /* recorta la imagen con las esquinas redondeadas */ 
+} 
+
+.tarjeta img { 
+  display: block; 
+  width: 100%; 
+  height: auto; 
+} 
+.tarjeta-informacion { 
+  color: var(--color-texto-suave);
+  padding: 1rem 1.25rem 1.25rem; 
+}
+.tarjeta:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  border-color: var(--color-secundario);
+}
+.costo{ 
+  color: var(--color-acento); 
+  font-size: 1.25rem; 
+  font-weight: 700; 
+  margin-bottom: 0; 
+}
+/*9. INFORMACION ADICIONAL*/
+.columnas{
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.texto-informacion{
+  flex: 2;
+}
+.horarios {
+  flex: 1; 
+  background-color: var(--color-fondo-alterno); 
+  border: 2px dashed var(--color-secundario); 
+  border-radius: var(--radio); 
+  padding: 1rem 1.5rem; 
+} 
+.horarios li:first-child {
+    font-weight: bold;
+}
+.horarios ul { 
+  margin: 0; 
+  padding-left: 1.25rem; 
+}
+.tabla-contenedor{
+  overflow-x: auto;
+}
+.tabla-servicios { 
+  width: 100%; 
+  border-collapse: collapse; 
+  box-shadow: var(--sombra);
+  border: #ffffff; 
+} 
+  
+.tabla-servicios caption { 
+  text-align: left; 
+  padding: 0.5rem 0; 
+  color: var(--color-texto-suave); 
+} 
+  
+.tabla-servicios th, 
+.tabla-servicios td { 
+  padding: 0.75rem 1rem; 
+  text-align: left; 
+  border-bottom: 1px solid var(--color-borde); 
+} 
+  
+.tabla-servicios th { 
+  background-color: var(--color-primario); 
+} 
+  
+.tabla-servicios tbody tr:nth-child(even) { 
+  background-color: var(--color-fondo); 
+} 
+  
+.tabla-servicios tbody tr:hover { 
+  background-color: var(--color-acento); 
+} 
+  
+.tabla-servicios tfoot td { 
+  font-size: 0.875rem; 
+  font-style: italic; 
+  color: var(--color-texto-suave); 
+}
+
+/*10. FORMULARIO*/
+
+:root{
+  --aviso-color:var(--color-acento);
+}
+.formulario{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 1.5rem;
+}
+.campo-completo{
+  grid-column: 1/-1;
+}
+/*Se añadio solid para mayor robustez */
+.aviso{
+  max-width: 600px;
+  padding: 0.75rem  1rem;
+  border: 2px solid var(--aviso-color);
+  border-left: 8px;
+  border-radius: 20px;
+  background-color: var(--color-fondo);
+  margin-bottom: 1rem;
+}
+.aviso::before {
+  content: "!";
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: var(--aviso-color);
+  color: #fff;
+  font-weight: bold;
+}
+.campo { 
+  margin-bottom: 1rem; 
+} 
+  
+.campo label { 
+  display: block; 
+  font-weight: 700; 
+  margin-bottom: 0.25rem; 
+} 
+  
+.campo input, 
+.campo select, 
+.campo textarea { 
+  width: 100%; 
+  padding: 0.65rem 0.75rem; 
+  border: 2px solid #cdb8a2; 
+  border-radius: 8px; 
+  background-color: #ffffff; 
+  font-family: inherit; 
+  font-size: 1rem; 
+} 
+  
+.campo input:focus, 
+.campo select:focus, 
+.campo textarea:focus { 
+  border-color: var(--color-primario); 
+  outline: 3px solid var(--color-secundario); 
+  outline-offset: 2px; 
+} 
+  
+.campo-check input { 
+  width: auto; 
+  margin-right: 0.5rem; 
+} 
+  
+.campo-check label { 
+  display: inline; 
+  font-weight: 400; 
+}
+/*11. PIE DE PAGINA  */
+.pie-pagina { 
+    background-color: var(--color-oscuro); 
+    color: var(--color-texto-claro); 
+    padding: 2rem 0; 
+} 
+.pie-pagina a { color: var(--color-texto-claro); } 
+.pie-pagina address { font-style: normal; }
+.pie-pagina .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.pie-pagina a:hover,
+.pie-pagina a:focus-visible { 
+    color: var(--color-acento); 
+    text-decoration: none; 
+}
+/* 12. RESPONSIVE  */
+@media (max-width: 900px) {
+  h1 {
+ font-size: 2.15rem;
+ }
+}
+
+@media (max-width: 600px) {
+  h1 {
+ font-size: 1.85rem;
+ }
+ h2 {
+ font-size: 1.6rem;
+ }
+ .encabezado .contenedor {
+ flex-direction: column;
+ text-align: center;
+ }
+ .menu-principal ul {
+ justify-content: center;
+ }
+ .hero {
+ min-height: 60vh;
+ padding: 3rem 0;
+ }
+ .columnas { 
+  flex-direction: column; 
+}
+.formulario { 
+  grid-template-columns: 1fr; 
+} 
+.pie-pagina .contenedor 
+{ flex-direction: column; 
+text-align: center; 
+} 
+
+}

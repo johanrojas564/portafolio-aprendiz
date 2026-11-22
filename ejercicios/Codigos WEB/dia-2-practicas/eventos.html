@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de evento_cafe aroma </title>
+</head>
+<body>
+    <header>
+        <h1>Solicita un evento privado</h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="#" method="post">
+                
+                <p>
+                    <label for="empresa">Nombre de la empresa:</label>
+                    <input type="text" id="empresa" name="empresa" autocomplete="organization" required>
+                </p>
+
+                <p>
+                    <label for="correo">Correo de contacto:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </p>
+
+                <p>
+                    <label for="codigo">Código de cotización:</label>
+                    <input type="text" id="codigo" name="codigo" pattern="[A-Z]{3}-\d{4}" title="El formato debe ser tres letras mayúsculas, un guion y cuatro dígitos (Ejemplo: ABC-1234)" required>
+                </p>
+
+                <p>
+                    <label for="invitados">Número de invitados:</label>
+                    <input type="number" id="invitados" name="invitados" 
+                           min="10" max="80" step="5" required>
+                </p>
+
+                <p>
+                    <label for="fecha">Fecha del evento:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </p>
+
+                <fieldset>
+                    <legend>Servicios adicionales</legend>
+                    
+                    <p>
+                        <input type="checkbox" id="cafe" name="servicios[]" value="cafe">
+                        <label for="cafe">Servicio de café</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="postres" name="servicios[]" value="postres">
+                        <label for="postres">Postres</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="decoracion" name="servicios[]" value="decoracion">
+                        <label for="decoracion">Decoración</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <label for="detalles">Detalles:</label>
+                    <textarea id="detalles" name="detalles" maxlength="500"></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Enviar solicitud</button>
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Cafe aroma </p>
+    </footer>
+
+</body>
+</html>

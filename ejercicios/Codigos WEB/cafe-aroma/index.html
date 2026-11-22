@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripcion" content="Café Aroma: café de especialidad de origencolombiano, postres artesanales y un espacio tranquilo en Bogotá para compartir.
+Reserva tu mesa.">
+    <title>cafe-aroma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="saltar-contenido" href="#contenido"> Saltar al contenido principal </a>
+    <header class="encabezado">
+        <div class="contenedor">
+            <a href="#inicio" class="logo">
+                <img src="img/logo-cafe.svg" alt="Logo principal de la cafeteria" width="250" height="50">
+            </a>
+        <!-- Lista de las partes de la pagina-->
+            <nav class="menu_principal" aria-label="navegacion-principal">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#menu">Carta</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Presentación de la marca -->
+         <section id="inicio" class="hero">
+            <div class="contenedor">
+            <h1>Cafe de especialidad para disfrutar sin prisa</h1>
+            <p>
+                En Café Aroma preparamos cada taza con granos de origen colombiano,
+                tostados en pequeños lotes y servidos con postres artesanales.
+            </p>
+            <a class="boton" href="#contacto">Reservar una mesa</a>
+            </div>
+         </section>
+         <!--Productos destacados -->
+         <section id="productos" class="seccion">
+            <div class="contenedor">
+            <h2>Nuestros Favoritos</h2>
+            <p class="introduccion">Tres productos que nuestros clientes piden una y otra vez</p>
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <img src="img/cafe-1.svg" alt="Taza de cafe expresso humeante" width="600" height="400" loading="lazy">
+                        <h3>Espresso de origen huilense</h3>
+                        <div class="tarjeta-texto">
+                            <p>Intenso, con notas a chocolate y caramelo. Elaborado con granos de Huila.</p>
+                            <p class="precio">$5.500</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img src="img/cafe-2.svg" alt="Crossaint de Mantequilla recien horneado" width="600" height="400" loading="lazy">
+                        <h3>Croissant de mantequilla</h3>
+                        <div class="tarjeta-texto">
+                            <p>Hojaldrado y crujiente, horneado cada mañana en nuestra cocina.</p>
+                            <p class="precio">$7.000</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta"> 
+                        <img src="img/cafe-3.svg" alt="Granos de cafe tostados" width="600" height="400" loading="lazy"> 
+                        <h3>Cafe en grano 250 g</h3>
+                        <div class="tarjeta-texto">
+                            <p>Para preparar en casa. Tostión media, ideal para prensa francesa.</p>
+                            <p class="precio">$28.000</p>
+                        </div>
+                    </article>
+                </div> <!--Cierre de la clase tarjetas-->
+                <p>
+                    <a class="ver-mas" href="#menu">Ver la carta completa</a>
+                </p>
+            </div>
+         </section>
+         <!-- Menu de bebidas -->
+        <section id="menu" class="seccion seccion--clara">
+            <div class="contenedor">
+            <h2>Carta de bebidas</h2>
+            <table class="tabla-carta">
+                <caption>Bebidas calientes y frías de Café Aroma</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Bebida</th>
+                        <th scope="col">Tamaño</th>
+                        <th scope="col">Precio(COP)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Expresso</td><td>90ml</td><td>$5.500</td></tr>
+                    <tr><td>Americano</td><td>240 ml</td><td>$6.500</td></tr>
+                    <tr><td>Capuchino</td><td>240 ml</td><td>$8.500</td></tr>
+                    <tr><td>Chocolate caliente</td><td>240 ml</td><td>$9.000</td></tr>
+                    <tr><td>Café frío con vainilla</td><td>350 ml</td><td>$10.500</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr><td colspan="3">Todos los precios incluyen impuestos</td></tr>
+                </tfoot>
+            </table>
+            </div>
+        </section>
+        <!-- Información adicional-->
+         <section id="nosotros" class="seccion">
+            <div class="contenedor">
+                <div class="columna-texto">
+                    <h2>Sobre nosotros</h2>
+                    <p>
+                        Café Aroma nació en 2018 con una idea sencilla: ofrecer un lugar tranquilo
+                        donde el café se prepare con cuidado y se comparta con calma.
+                    </p>
+                    <p>
+                        Trabajamos directamente con caficultores y tostamos en pequeñas cantidades
+                        para que cada taza conserve todo su aroma.
+                    </p>
+                </div>
+                <aside class="horarios">
+                    <h3>Horarios</h3>
+                    <ul>
+                        <li>Lunes a viernes: 7:00 a. m. a 7:00 p. m.</li>
+                        <li>Sábados: 8:00 a. m. a 8:00 p. m.</li>
+                        <li>Domingos: 8:00 a. m. a 2:00 p. m.</li>
+                    </ul>
+                </aside>
+            </div>
+         </section>
+         <section id="contacto" class="seccion seccion--clara">
+            <div class="contenedor">
+                <p class="aviso">
+                    Atendemos con reserva previa los fines de semana
+                </p>
+                <p class="aviso aviso--exito">
+                    Te confirmaremos tu reserva por correo o por teléfono.
+                </p>
+                <p class="aviso aviso--error">
+                    No se ha podido confirmar tu reserva. Inténtalo de nuevo.
+                </p>
+            </div>
+            <div class="contenedor">
+                <h2>Reserva tu mesa</h2>
+                <p>
+                    Déjanos aquí tus datos y te llamaremos o enviaremos un correo. 
+                    Los campos que tengan * son obligatorios.
+                </p>
+                <form class="formulario" action="#" method="post">
+                    <div class="campo"> 
+                        <label for="nombre">Nombre completo *</label> 
+                        <input type="text" name="nombre" id="nombre" placeholder="Ej: Juan Ramírez" required minlength="3" autocomplete="name">
+                    </div> 
+                    <div class="campo"> 
+                        <label for="correo">Correo Electrónico *</label>
+                        <input type="email" name="correo" id="correo" placeholder="nombre@gmail.com" required autocomplete="email">
+                    </div> 
+                    <div class="campo"> 
+                        <label for="telefono">Número de teléfono</label>
+                        <input type="tel" name="telefono" id="telefono" pattern="[0-9]{10}" placeholder="3001234567" autocomplete="tel">
+                    </div> 
+                    <div class="campo"> 
+                        <label for="fecha">Fecha de la reserva</label>
+                        <input type="date" name="fecha" id="fecha">
+                    </div> 
+                    <div class="campo"> 
+                        <label for="personas">Cantidad de asistentes (1 a 12)</label>
+                        <input type="number" name="personas" id="personas" min="1" max="12" value="2">
+                    </div> 
+                    <div class="campo"> 
+                        <label for="motivo">Motivo de la reserva</label>
+                        <select name="motivo" id="motivo">
+                            <option value="reserva">Reserva de mesa</option>
+                            <option value="evento">Evento privado</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div> 
+                    <div class="campo"> 
+                        <input type="checkbox" name="acepto" id="acepto" required>
+                        <label for="acepto">Acepto el tratamiento de mis datos *</label>
+                    </div> 
+                    <button type="submit" class="boton">Enviar solicitud</button>
+                </form>
+            </div>
+         </section>
+    </main>
+    <footer class="pie">
+        <div class="contenedor">
+            <p>&copy; 2026 Café Aroma. Todos los derechos reservados</p>
+            <address>Carrera 10 # 20-30, Bogotá &middot; <a href="mailto:hola@cafearoma.example">hola@cafearoma.example</a></address>
+        </div>
+    </footer>
+</body>
+</html>

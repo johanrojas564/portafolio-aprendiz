@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de contacto</title>
+</head>
+<body>
+
+  <h1>Formulario de contacto</h1>
+  <p>Los campos marcados con * son obligatorios.</p>
+
+  <!-- action="#" significa que no se envía a ningún servidor.
+       Para recibir los datos hace falta un lenguaje de servidor o un servicio externo. -->
+  <form action="#" method="post">
+
+    <p>
+      <label for="nombre">Nombre completo *</label><br>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej.: Ana Gómez" required minlength="3" autocomplete="on">
+    </p>
+
+    <p>
+      <label for="correo">Correo electrónico *</label><br>
+      <input type="email" id="correo" name="correo" placeholder="nombre@ejemplo.com" required autocomplete="on">
+    </p>
+
+    <p>
+      <label for="telefono">Teléfono celular (10 dígitos)</label><br>
+      <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="3001234567" autocomplete="on">
+    </p>
+
+    <p>
+      <label for="clave">Contraseña (mínimo 8 caracteres)</label><br>
+      <input type="password" id="clave" name="clave" minlength="8">
+    </p>
+
+    <p>
+      <label for="fecha">Fecha de la reserva</label><br>
+      <input type="date" id="fecha" name="fecha">
+    </p>
+    <p>
+      <fieldset>
+        <legend>Zona preferida</legend>
+        <label> Interior</label> <input type="radio" name="zona" id="zona1">
+        <label> Terraza </label> <input type="radio" name="zona" id="zona2">
+      </fieldset>
+    </p>
+    <p>
+      <label for="personas">Número de personas (1 a 12)</label><br>
+      <input type="number" id="personas" name="personas" min="1" max="12" value="2">
+    </p>
+    <p>
+      <label for="hora"> Hora de la reservación</label>
+      <input type="time" min="07:00" max="19:00" >
+    </p>
+    <p>
+      <fieldset>
+        <legend>¿Que te gustaria probar</legend>
+        <label>Expreso</label> <input type="checkbox" name="interes" id="interes1">
+        <br>
+        <label>Postres</label> <input type="checkbox" name="interes" id="interes2">
+        <br>
+        <label>Cafe en grano</label> <input type="checkbox" name="interes" id="interes3">
+      </fieldset>
+    </p>
+    <p>
+      <label for="motivo">Motivo del mensaje</label><br>
+      <select id="motivo" name="motivo">
+        <option value="">Selecciona una opción</option>
+        <option value="reserva">Hacer una reserva</option>
+        <option value="evento">Evento privado</option>
+        <option value="otro">Otro</option>
+      </select>
+    </p>
+
+    <fieldset>
+      <legend>¿Cómo prefieres que te contactemos?</legend>
+      <input type="radio" id="por-correo" name="contacto" value="correo" checked>
+      <label for="por-correo">Correo</label>
+      <input type="radio" id="por-telefono" name="contacto" value="telefono">
+      <label for="por-telefono">Teléfono</label>
+    </fieldset>
+
+    <p>
+      <label for="mensaje">Mensaje</label><br>
+      <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escribe tu mensaje aquí" maxlength="300"></textarea>
+    </p>
+
+    <p>
+      <input type="checkbox" id="acepto" name="acepto" required>
+      <label for="acepto">Acepto el tratamiento de mis datos *</label>
+    </p>
+
+    <button type="submit">Enviar mensaje</button>
+    <button type="reset">Limpiar Formulario</button>
+
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo de caja (Box Model)</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f1f5f9;
+      padding: 1.5rem;
+    }
+
+    .caja {
+      width: 300px;               /* ancho del contenido (content-box por defecto) */
+      padding: 30px;              /* espacio entre el contenido y el borde */
+      border: 10px solid #1d4ed8; /* borde */
+      margin: 30px 0;             /* espacio exterior */
+      background-color: #dbeafe;
+    }
+
+    /* Con border-box, el ancho de 300 px incluye relleno y borde */
+    .caja-border-box {
+      box-sizing: border-box;
+      background-color: #dcfce7;
+      border-color: #16a34a;
+    }
+    /*Contenedor nuevo sobre el ejercicio */
+    .caja-centrada{
+      width:50%;
+      margin: 30px auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>El modelo de caja</h1>
+
+  <div class="caja">
+    <strong>content-box</strong> (valor por defecto).<br>
+    Ancho total = 300 + 20 + 20 + 10 + 10 = 360 px.
+  </div>
+
+  <div class="caja caja-border-box">
+    <strong>border-box</strong>.<br>
+    Ancho total = 300 px (el relleno y el borde ya están incluidos).
+  </div>
+
+  <p>
+    Abre las herramientas del desarrollador (F12), selecciona cada caja y observa
+    el diagrama de colores del modelo de caja en la pestaña <em>Computed / Calculado</em>.
+  </p>
+
+  <div class="caja caja-border-box caja-centrada">
+    Este es el nuevo contenedor sobre el ejercicio 5 
+  </div>
+
+</body>
+</html>

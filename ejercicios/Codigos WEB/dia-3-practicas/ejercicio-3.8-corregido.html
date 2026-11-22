@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio: ¿por qué no cambia el color?</title>
+  <style>
+    /* Objetivo: el título debe verse azul, el aviso rojo y el botón verde.
+       Revisa por qué algunos estilos no se aplican. */
+
+
+
+
+
+    h1 {
+      color: blue;
+    }
+
+    .aviso {
+      color: red;
+    }
+
+    p {
+      color: black;
+    }
+
+    .boton {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .boton:hover {
+      background-color: darkgreen;
+    }
+
+    .tarjeta h2 {
+      color: purple;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <main id="principal">
+    <h1>Título que debe verse azul</h1>
+    <p class="aviso">Aviso que debe verse rojo</p>
+    <a class="boton" href="#">Botón verde</a>
+
+    <div class="tarjeta">
+      <h2>Subtítulo morado de 24 px</h2>
+    </div>
+  </main>
+
+</body>
+</html>

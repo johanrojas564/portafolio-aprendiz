@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox en acción</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 1.5rem;
+      background-color: #f1f5f9;
+    }
+
+    h2 { margin: 2rem 0 0.5rem; }
+
+    /* Contenedor flex: sus hijos directos pasan a ser "elementos flex" */
+    .contenedor {
+      display: flex;
+      gap: 10px;
+      background-color: #cbd5e1;
+      padding: 10px;
+      min-height: 120px;
+    }
+
+    .caja {
+      background-color: #2563eb;
+      color: #ffffff;
+      padding: 1rem;
+      border-radius: 8px;
+      min-width: 80px;
+      text-align: center;
+    }
+
+    /* 1. Dirección y distribución en el eje principal */
+    .centro   { justify-content: flex-end; } /* Lo que sucederia a continuación es que los elementos se moveran hacia la derecha en vez de quedarse en el centro */
+    /* Esta predicción fue acertada */
+    .entre    { justify-content: space-between; } 
+    .columna  { flex-direction: column; 
+    align-items: center;} /* El ancho de los objetos se comprimira hacia el centro */
+    /* Esta predicción fue acertada */
+
+    /* 2. Alineación en el eje transversal */
+    .alinear-centro { align-items: center; }
+    .alinear-final  { align-items: flex-end; 
+    flex-direction: row-reverse;} /*Las cajas van a invertir su orden  */
+    /* Esta predicción fue acertada */
+
+    /* 3. Salto de línea cuando no caben */
+    .envolver { flex-wrap: nowrap; } /*Si los elementos no caben en la linea, simplemente se desbordan de su contenedor */
+    /* Esta predicción fue acertada */
+    .envolver .caja { width: 220px; }
+
+    /* 4. Crecimiento de un elemento */
+    .crece .caja:nth-child(2) { flex: 2; } /*Al poner los otros elementos co flex 1 pasaria que estos compartiran la tabla*//* Esta predicción fue acertada */
+    /*Cuando el flex del segundo aumente a 2, desplazara a los elementos, pero no rompera la tabla*//* Esta predicción fue acertada */
+    .crece .caja:nth-child(1) {flex: 1;}
+    .crece .caja:nth-child(3) {flex: 1;}
+  </style>
+</head>
+<body>
+
+  <h1>Flexbox: ejemplos</h1>
+
+  <h2>justify-content: center</h2>
+  <div class="contenedor centro">
+    <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+  </div>
+
+  <h2>justify-content: space-between</h2>
+  <div class="contenedor entre">
+    <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+  </div>
+
+  <h2>align-items: center</h2>
+  <div class="contenedor alinear-centro">
+    <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+  </div>
+
+  <h2>align-items: flex-end</h2>
+  <div class="contenedor alinear-final">
+    <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+  </div>
+
+  <h2>flex-direction: column</h2>
+  <div class="contenedor columna">
+    <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+  </div>
+
+  <h2>flex-wrap: wrap (cambia el ancho de la ventana)</h2>
+  <div class="contenedor envolver">
+    <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+    <div class="caja">4</div><div class="caja">5</div><div class="caja">6</div>
+  </div>
+
+  <h2>flex: 1 (el elemento 2 ocupa el espacio sobrante)</h2>
+  <div class="contenedor crece">
+    <div class="caja">1</div><div class="caja">2 (flex: 1)</div><div class="caja">3</div>
+  </div>
+<!-- Lo que mas me sorprendio es como la falta de una unica propiedad como lo es flex wrap puede hacer que los elementos 
+ se salgan de su contenedor y arruinen el diseño -->
+<!-- La propiedad que mas util me resulto es justify-content ya que permite distribuir de forma uniforme el contenido -->
+<!-- No tengo dudas sobre estas funciones al respecto -->
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ESCRIBE AQUÍ una descripción de 120 a 160 caracteres de tu sitio.">
+  <title>POWERFIT </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <a class="saltar-contenido" href="#contenido"> Saltar al contenido principal </a>
+  <!-- 1. CABECERA Y NAVEGACIÓN: logo + enlaces a las secciones -->
+  <header id="cabeza" class="encabezado">
+    <div class="contenedor">
+    <a href="#inicio" class="logo"><img  class="" src="img/logo-gym.svg" alt="Logo de la marca"></a>
+
+    <nav class="menu-navegacion" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios"> Nuestros Servicios</a></li>
+        <li><a href="#precios"> Precios</a></li>
+        <li><a href="#nosotros">Nosotros </a></li>
+        <li><a href="#contacto">Contactanos</a></li>
+        <!-- agrega los demás enlaces -->
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 2. SECCIÓN DE PRESENTACIÓN (hero): un único <h1>, un texto breve y un botón -->
+    <section id="inicio" class="imagen-hero">
+      <div class="contenedor">
+        <h1> Gimnasio de alta calidad multiservicios  </h1>
+        <p>
+          En powerfit, buscamos crear un espacio donde no solo entrenes, fortalezcas tu salud con nuestros instructores especializados 
+          y recibas atencion profesional, nos preocupamos de que estes fuerte y sano. 
+        </p>
+        <a class="boton" href="#contacto"> Pedir una membresia </a>
+      </div>
+    </section>
+
+    <!-- 3. SERVICIOS, PRODUCTOS O PROYECTOS: mínimo 3 elementos con imagen, título y texto -->
+    <section id="servicios" class="seccion" >
+      
+      <div class="contenedor">
+        <h2>Nuestras membresias</h2>
+        <p class="Presentación"></p>
+        <div class="espacio-tarjeta">
+          <article class="tarjeta">
+            <img src="img/gym-nutricion.svg" alt="Icono de manzana" width="600" height="400" >
+            <h3>Casual </h3> 
+            <div class="tarjeta-informacion">
+              <p> Acceso al equipo basico de entranamiento y cafeteria </p>
+              <p class="costo"> $60000</p>
+            </div>
+          </article>
+            <article class="tarjeta">
+            <img src="img/gym-cardio.svg" alt="Icono de corazon con barra" width="600" height="400" >
+            <h3>Dedicado</h3> 
+            <div class="tarjeta-informacion">
+              <p> Acesso a las maquinas de entranamiento, cafeteria y spa.   </p>
+              <p class="costo"> $80000</p>
+            </div>
+          </article>
+            <article class="tarjeta">
+            <img src="img/gym-pesas.svg" alt="Icono de manzana" width="600" height="400" >
+            <h3>Veterano </h3> 
+            <div class="tarjeta-informacion">
+              <p> Acceso completo a todo el gymnasio, entrenador personal y regalos de suplementos </p>
+              <p class="costo"> $200000 </p>
+            </div>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+        <p class="aviso">
+          El plan veterano incluye todos los servicios sin costes
+        </p>
+<section class="seccion">
+  <div class="contenedor">
+    <div class="sala-grid">
+      <div class="sala-info">
+        <h3>Nuestras salas</h3>
+        <p class="presentacion">
+          Nuestra sede cuenta con salas altamente capacitadas para el entrenamiento de principiantes y expertos.
+        </p>
+      </div>
+      <aside class="sala-imagen">
+        <!-- Fragmento con <picture> para WebP y respaldo JPG -->
+        <picture>
+          <source srcset="img/vista_gym.WebP" type="image/webp">
+          <img src="img/vista_gym.jpg" alt="Demostración de una sala de gimnasio" loading="lazy" width="600" height="300">
+        </picture>
+      </aside>>
+    </div>
+  </div>
+</section>
+    <!-- 4. SECCIÓN INFORMATIVA ADICIONAL: quiénes somos, horarios, precios, testimonios... -->
+     <Section id="precios" class="seccion seccion-clara">
+      <div class="contenedor">
+        <h2> Catalogo de servicios</h2>
+        <div class="tabla-contenedor"> 
+        <table class="tabla-servicios">
+          <caption>Catalogo de servicios y membresias</caption>
+            <thead> 
+             <tr>
+                <th scope="col">Servicio</th>
+                <th scope="col">Precio(cop)</th>
+                <th scope="col"> ¿Incluido para Casual? </th>
+                <th scope="col">  ¿Incluido para Dedicado? </th>
+               <th scope="col"> ¿Incluido Veterano?</th>
+              </tr>
+            </thead>
+           <tbody>
+              <tr><td>maquinas de fuerza</td><td>No aplica</td><td >si</td><td>si</td><td>si</td></tr>
+              <tr><td>maquinas de Cardio</td><td>No aplica</td><td >si</td><td>si</td><td>si</td></tr>
+              <tr><td>maquinas de resistencia</td><td>No aplica</td><td >si</td><td>si</td><td>si</td></tr>
+              <tr><td>cafeteria</td><td>No aplica</td><td >no</td><td>si</td><td>si</td></tr>
+              <tr><td>spa</td><td>$10000/sesion</td><td>no </td><td>si</td><td>si </td></tr>
+              <tr><td>Piscina</td><td>$5000/persona</td><td >no</td><td>si</td><td>si</td></tr>
+              <tr><td>entrenador</td><td>No aplica </td><td >no</td><td>si</td><td>si</td></tr>
+              <tr><td>Paquete de suplementos </td><td>$150000</td><td >no</td><td>si</td><td>si</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="5"> Todos los precios incluyen impuestos</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+     </Section>
+    <section id="nosotros" class="seccion">
+      <div class="contenedor">
+        <div class="columnas">
+        
+        <div class="texto-informacion">
+          <h2>Sobre Nosotros</h2>
+          <p>
+            Power-Fit nació de una pasión clara: crear un espacio donde el fitness fuera accesible, retador y, sobre todo, humano. 
+            </p>
+            <p>
+            Fundado con la misión de ir más allá del concepto tradicional de entrenar, 
+            nuestro gimnasio creció con el sueño de reunir a una comunidad dispuesta a superarse día a día. 
+            Desde el primer día, nos hemos dedicado a ofrecer un ambiente cercano, 
+            equipamiento de calidad y la guía experta necesaria para que cada persona escriba su propia historia de transformación.
+          </p>
+        </div>
+        <aside class="horarios">
+          <h3>Horarios</h3>
+              <ul>
+                <li>Lunes a viernes: 6:00 a. m. a 8:00 p. m.</li>
+                <li>Sábados: 8:00 a. m. a 8:00 p. m.</li>
+                <li>Domingos: 8:00 a. m. a 5:00 p. m.</li>
+              </ul>
+        </aside>
+      </div>
+    </div>
+    </section>
+    <!-- 5. CONTACTO: formulario con label, required y al menos un tipo de validación -->
+    <section id="contacto">
+      <div class="contenedor"> 
+        <h2> Reserva un plan </h2>
+          <p>
+            Déjanos aquí tus datos y  enviaremos un correo. 
+            Los campos que tengan * son obligatorios.
+          </p>
+        <form class="formulario" action="#" method="post" >
+          <div class="campo">
+            <label for="nombre">Nombre completo *</label> 
+            <input type="text" name="nombre" id="nombre" placeholder="Ej: Andrea Perez" minlength="3" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="correo">Correo Electrónico *</label>
+            <input type="email" name="correo" id="correo" placeholder="nombre@gmail.com" autocomplete="email" required>
+          </div>
+          <div class="campo">
+          <label for="documento">documento *</label>
+            <input type="text" name="documento" id="documento" pattern="[0-9]{10}" placeholder="3001234567" required>
+          </div> 
+          <div class="campo">
+          <label for="tarjeta">tarjeta *</label>
+            <input type="text" name="tarjeta" id="tarjeta" pattern="[0-9]{13,19}" placeholder="3001234567" required>  
+          </div>
+          <div class="campo">
+            <label for="fecha-nac"> Fecha de nacimiento * </label>
+            <input type="date" name="fecha-nac" id="fecha-nac" required>
+          </div>
+          <button class="boton" type="submit"> Enviar solicitud </button>
+          </form>
+      </div>
+    </section>
+  </main>
+  <footer class="pie-pagina">
+    <div class="contenedor"> 
+      <p>&copy; 2026 Power-Fit.</p>
+      <address>Carrera 7 # 20-65, Bogotá &middot; <a href="mailto:powerfitOff1c1al@.powerfit.co">powerfitOff1c1al@.powerfit.co</a></address>
+    </div>
+    
+  </footer>
+
+</body>
+</html>

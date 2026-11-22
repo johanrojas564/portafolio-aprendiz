@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Sin esta línea, los celulares muestran la página "encogida" como si fuera de escritorio -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño responsive</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background-color: #f8fafc;
+    }
+
+    img {
+      max-width: 100%;   /* imagen flexible */
+      height: auto;
+    }
+
+    .estado {
+      padding: 1rem;
+      border-radius: 8px;
+      color: #ffffff;
+      font-weight: 700;
+      background-color: #0f766e;     /* escritorio */
+      margin-bottom: 1rem;
+    }
+    .estado::after { content: "Vista de escritorio (más de 768 px)"; }
+
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .tarjeta {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      padding: 1rem;
+    }
+
+    /* Tabletas */
+    @media (max-width: 768px) {
+      .estado { background-color: #b45309; }
+      .estado::after { content: "Vista de tableta (481 a 768 px)"; }
+      .tarjetas { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Celulares */
+    @media (max-width: 480px) {
+      .estado { background-color: #b91c1c; }
+      .estado::after { content: "Vista de celular (hasta 480 px)"; }
+      .tarjetas { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Diseño responsive</h1>
+  <p>Cambia el ancho de la ventana del navegador (o usa el modo dispositivo de F12) y observa el recuadro de color.</p>
+
+  <div class="estado"></div>
+
+  <div class="tarjetas">
+    <article class="tarjeta">
+      <img src="img/cafe-1.svg" alt="Taza de café" width="600" height="400">
+      <h2>Tarjeta 1</h2><p>Texto de ejemplo para la tarjeta.</p>
+    </article>
+    <article class="tarjeta">
+      <img src="img/cafe-2.svg" alt="Croissant" width="600" height="400">
+      <h2>Tarjeta 2</h2><p>Texto de ejemplo the la tarjeta.</p>
+    </article>
+    <article class="tarjeta">
+      <img src="img/cafe-3.svg" alt="Granos de café" width="600" height="400">
+      <h2>Tarjeta 3</h2><p>Texto de ejemplo para la tarjeta.</p>
+    </article>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+/* Hoja de estilos de café-aroma */
+/*Sección 1 - Variables: paleta de color repetitiva*/
+:root{
+  --color-oscuro: #14301f; 
+  --color-primario: #2f6b45; 
+  --color-secundario: #9cc7a8; 
+  --color-acento: #1f7a4d; 
+  --color-acento-oscuro: #17603b; 
+  --color-fondo: #f4f8f3 ; 
+  --color-fondo-alterno: #e3efe5; 
+  --color-texto: #2b2b2b; 
+  --color-texto-suave: #555555; 
+  --radio: 12px; 
+  --sombra: 0 4px 12px rgba(0, 0, 0, 0.12); 
+  --color-texto-claro: #f4f8f3;
+  --color-borde:#c7dccb;  
+}
+/* Sección 2- Reglas Basicas*/
+*::before, 
+*::after{
+    box-sizing: border-box; /*El ancho de los cuadrados contara tambien el margin y el padding*/
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+/*Sección 3 - Tipografia*/
+h1{
+    font-size: 2.5rem ;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+}
+
+h2{
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin: 0 0 0.5rem;
+}
+.seccion h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-secundario);
+    border-radius: 999px;
+    margin-top: 0.5rem;
+}
+h3{
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+}
+p{
+    margin: 0 0 1rem;
+}
+a{
+    color: var(--color-acento);
+}
+a:hover{
+    color: var(--color-acento-oscuro);
+    text-decoration: none;
+}
+/*Foco visible para el usuario que este navegando*/
+a:focus-visible, 
+button:focus-visible{
+    outline: 3px var(--color-acento-oscuro);
+    outline-offset: 3px;
+}
+/*Sección 4- Contenedores, clases y secciones*/
+.contenedor{
+    width: 90% ;
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+.seccion{
+    padding: 3rem 0;
+}
+.seccion-clara {
+    background-color: var(--color-fondo-alterno);
+}
+.introduccion{
+    max-width: 60ch;
+    color: var(--color-texto-suave);
+    margin-bottom: 1.5rem;
+}
+/*Sección 5- Encabezado y parte de navegación*/
+.encabezado{
+    background-color: var(--color-oscuro);
+    padding: 1rem 0;
+}
+.logo{
+    display: inline-block;
+}
+.logo img{
+    display: block;
+}
+.menu_principal ul{
+    list-style: none;
+    margin: 0.5rem 0 0 ;
+    padding: 0;
+}
+.menu_principal li{
+    display: inline-block;/*Todos los elementos quedaran en una sola linea*/
+}
+.menu_principal a{
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #f5e6d3;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.menu_principal a:hover,
+.menu_principal a:focus-visible{
+    background-color: var(--color-primario);
+    color: #ffffff;
+}
+/*Sección 6- Presentación (Hero)*/
+.hero{
+    background-color: var(--color-oscuro);
+    color: #ffffff; 
+    padding: 4rem 0;
+}
+.hero p{ 
+    max-width: 55ch;
+    font-size: 1.125rem;
+    color: var(--color-texto-claro);
+}
+/*Sección 7 - Botones y estados*/
+.boton{
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+}
+.boton:hover{
+    background-color: var(--color-acento-oscuro);
+    color: #ffffff;
+}
+.boton:focus-visible{
+    outline: none;
+    box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px var(--color-texto); 
+}
+.boton:active{
+    transform: translateY(2px);
+}
+/*Sección 8-Tarjetas*/
+.tarjeta { 
+  background-color: #ffffff; 
+  border: 1px solid var(--color-borde); 
+  border-radius: var(--radio); 
+  box-shadow: var(--sombra); 
+  overflow: hidden; /* recorta la imagen con las esquinas redondeadas */ 
+  margin-bottom: 1.5rem; 
+  max-width: 420px; 
+} 
+.tarjeta img { 
+  display: block; 
+  width: 100%; 
+  height: auto; 
+} 
+.tarjeta-texto { 
+  padding: 1rem 1.25rem 1.25rem; 
+}
+.tarjeta:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  border-color: var(--color-secundario);
+}
+.precio { 
+  color: var(--color-acento); 
+  font-size: 1.25rem; 
+  font-weight: 700; 
+  margin-bottom: 0; 
+}  
+/*Sección 9 - tablas de la carta*/
+.tabla-carta { 
+  width: 100%; 
+  border-collapse: collapse; 
+  background-color: #ffffff; 
+  box-shadow: var(--sombra); 
+} 
+  
+.tabla-carta caption { 
+  text-align: left; 
+  padding: 0.5rem 0; 
+  color: var(--color-texto-suave); 
+} 
+  
+.tabla-carta th, 
+.tabla-carta td { 
+  padding: 0.75rem 1rem; 
+  text-align: left; 
+  border-bottom: 1px solid var(--color-borde); 
+} 
+  
+.tabla-carta th { 
+  background-color: var(--color-primario); 
+  color: #ffffff; 
+} 
+  
+.tabla-carta tbody tr:nth-child(even) { 
+  background-color: var(--color-fondo); 
+} 
+  
+.tabla-carta tbody tr:hover { 
+  background-color: #d1e7d6; 
+} 
+  
+.tabla-carta tfoot td { 
+  font-size: 0.875rem; 
+  font-style: italic; 
+  color: var(--color-texto-suave); 
+}
+.ver-mas::after {
+    content: " \00BB";
+}
+/*Seccion 10 - Informacion adicional*/
+.horarios { 
+  background-color: #ffffff; 
+  border: 2px dashed var(--color-secundario); 
+  border-radius: var(--radio); 
+  padding: 1rem 1.5rem; 
+  margin-top: 1.5rem; 
+} 
+.horarios li:first-child {
+    font-weight: bold;
+}
+.horarios ul { 
+  margin: 0; 
+  padding-left: 1.25rem; 
+}
+
+/*Sección 11- Formulario*/
+.campo { 
+  margin-bottom: 1rem; 
+} 
+  
+.campo label { 
+  display: block; 
+  font-weight: 700; 
+  margin-bottom: 0.25rem; 
+} 
+  
+.campo input, 
+.campo select, 
+.campo textarea { 
+  width: 100%; 
+  padding: 0.65rem 0.75rem; 
+  border: 2px solid var(--color-secundario);
+  border-radius: 8px; 
+  background-color: #ffffff; 
+  font-family: inherit; 
+  font-size: 1rem; 
+} 
+  
+.campo input:focus, 
+.campo select:focus, 
+.campo textarea:focus { 
+  border-color: var(--color-primario); 
+  outline: 3px solid var(--color-secundario); 
+  outline-offset: 2px; 
+} 
+  
+.campo-check input { 
+  width: auto; 
+  margin-right: 0.5rem; 
+} 
+  
+.campo-check label { 
+  display: inline; 
+  font-weight: 400; 
+}
+/*Seccion 12- pie  de pagina*/
+.pie { 
+background-color: var(--color-oscuro); 
+color: var(--color-texto-claro); 
+padding: 2rem 0; 
+text-align: center; 
+} 
+.pie a { 
+color: var(--color-texto-claro); 
+} 
+.pie address { 
+font-style: normal; 
+} 
