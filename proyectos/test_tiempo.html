@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JAD MATHY | Meta Diaria</title>
+
+    <link rel="stylesheet" href="estilos_registros.css">
+</head>
+
+<body>
+
+    <main class="element-login-light">
+
+        <!-- PANEL IZQUIERDO: IDENTIDAD DE MARCA -->
+        <aside class="brand-banner">
+
+            <div class="math-decorations" aria-hidden="true">
+                <span class="math-badge plus">+</span>
+                <span class="math-badge minus">×</span>
+                <span class="math-badge divide">÷</span>
+                <span class="math-badge multiply">−</span>
+                <span class="math-badge pi">π</span>
+            </div>
+
+            <section class="brand-content">
+
+                <img
+                    src="img/LOGO-MATHY-ORIGINAL_SINFONDO-.webp"
+                    alt="Logo de JAD Mathy"
+                    class="brand-logo"
+                >
+
+                <div>
+                    <h1 class="brand-title">
+                        ¡Tu aventura matemática te espera!
+                    </h1>
+
+                    <p class="brand-description">
+                        Completa estos rápidos pasos para que 
+                        el zorro cree el camino de aprendizaje
+                        perfecto para ti.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- PROGRESO DE CONFIGURACIÓN -->
+            <ol class="test-steps">
+
+                <li class="test-step completed">
+                    <span class="step-number" aria-label="Completado">
+                        ✓
+                    </span>
+
+                    <div class="step-information">
+                        <h2>Grado de Estudio</h2>
+                        <p>Adaptamos los desafíos a tu nivel escolar.</p>
+                    </div>
+                </li>
+
+                <li class="test-step active" aria-current="step">
+                    <span class="step-number">2</span>
+
+                    <div class="step-information">
+                        <h2>Meta Diaria</h2>
+                        <p>Tú decides cuánto tiempo jugar al día.</p>
+                    </div>
+                </li>
+
+                <li class="test-step">
+                    <span class="step-number">3</span>
+
+                    <div class="step-information">
+                        <h2>Nivel Inicial</h2>
+                        <p>Elige una prueba de diagnóstico o empieza de cero.</p>
+                    </div>
+                </li>
+
+            </ol>
+
+        </aside>
+
+
+        <!-- PANEL DERECHO: SELECCIÓN DE META DIARIA -->
+        <section class="login-container test-container">
+
+            <!-- ENCABEZADO -->
+            <header class="test-header">
+
+                <div class="test-brand">
+                    <img
+                        src="img/LOGO-MATHY-ORIGINAL_SINFONDO-.webp"
+                        alt="JAD"
+                        class="test-logo"
+                    >
+
+                    <span>Mathy</span>
+                </div>
+
+                <nav
+                    class="test-progress"
+                    aria-label="Progreso de configuración"
+                >
+                    <span class="progress-indicator completed"></span>
+                    <span class="progress-indicator active"></span>
+                    <span class="progress-indicator"></span>
+                </nav>
+
+            </header>
+
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <section class="test-content daily-content">
+
+                <div class="form-title-group">
+
+                    <h2 class="form-title">
+                        ¿Qué tanto tiempo utilizarías la aplicación al día?
+                    </h2>
+
+                    <p class="form-subtitle">
+                        Establece tu meta diaria para que JAD te mantenga
+                        motivado sin sobrecargarte.
+                    </p>
+
+                </div>
+
+
+                <!-- OPCIONES DE TIEMPO -->
+                <form class="login-form daily-form">
+
+                    <fieldset class="daily-options">
+
+                        <legend class="visually-hidden">
+                            Selecciona tu meta diaria
+                        </legend>
+
+                        <!-- 5 MINUTOS -->
+                        <label class="daily-option">
+
+                            <input
+                                type="radio"
+                                name="daily-goal"
+                                value="5"
+                            >
+
+                            <span class="daily-radio"></span>
+
+                            <span class="daily-information">
+                                <strong>5 Minutos</strong>
+
+                                <small>
+                                    ¡Perfecto para un calentamiento rápido!
+                                </small>
+                            </span>
+
+                        </label>
+
+
+                        <!-- 10 MINUTOS -->
+                        <label class="daily-option selected">
+
+                            <input
+                                type="radio"
+                                name="daily-goal"
+                                value="10"
+                                checked
+                            >
+
+                            <span class="daily-radio"></span>
+
+                            <span class="daily-information">
+                                <span class="daily-title">
+                                    <strong>10 Minutos</strong>
+
+                                    <span class="recommended-tag">
+                                        Recomendado
+                                    </span>
+                                </span>
+
+                                <small>
+                                    La mejor constancia según científicos del juego.
+                                </small>
+                            </span>
+
+                        </label>
+
+
+                        <!-- 15 MINUTOS -->
+                        <label class="daily-option">
+
+                            <input
+                                type="radio"
+                                name="daily-goal"
+                                value="15"
+                            >
+
+                            <span class="daily-radio"></span>
+
+                            <span class="daily-information">
+                                <strong>15 Minutos</strong>
+
+                                <small>
+                                    Un excelente ritmo para superar récords semanales.
+                                </small>
+                            </span>
+
+                        </label>
+
+
+                        <!-- 20 MINUTOS -->
+                        <label class="daily-option">
+
+                            <input
+                                type="radio"
+                                name="daily-goal"
+                                value="20"
+                            >
+
+                            <span class="daily-radio"></span>
+
+                            <span class="daily-information">
+                                <strong>20 Minutos</strong>
+
+                                <small>
+                                    ¡Desafíos completos para matemáticos implacables!
+                                </small>
+                            </span>
+
+                        </label>
+
+                    </fieldset>
+
+                </form>
+
+            </section>
+
+
+            <!-- NAVEGACIÓN -->
+            <footer class="test-navigation">
+
+                <button type="button" class="btn-back">
+                    Atrás
+                </button>
+
+                <button type="button" class="btn-start-experience">
+                    EMPEZAR EXPERIENCIA
+                </button>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
