@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAD MATHY | Configuración inicial</title>
+
+    <link rel="stylesheet" href="estilos_registros.css">
+</head>
+
+<body>
+
+    <main class="element-login-light">
+
+        <!-- PANEL IZQUIERDO: IDENTIDAD DE MARCA -->
+        <aside class="brand-banner">
+
+            <!-- Decoraciones matemáticas -->
+            <div class="math-decorations" aria-hidden="true">
+                <span class="math-badge plus">+</span>
+                <span class="math-badge minus">×</span>
+                <span class="math-badge divide">÷</span>
+                <span class="math-badge multiply">−</span>
+                <span class="math-badge pi">π</span>
+            </div>
+
+            <!-- Contenido principal de marca -->
+            <section class="brand-content">
+
+                <img
+                    src="img/LOGO-MATHY-ORIGINAL_SINFONDO-.webp"
+                    alt="Logo de JAD Mathy"
+                    class="brand-logo"
+                >
+
+                <div>
+                    <h1 class="brand-title">
+                        ¡Tu aventura matemática te espera!
+                    </h1>
+
+                    <p class="brand-description">
+                        Completa estos rápidos pasos para que JAD
+                        el zorro cree el camino de aprendizaje
+                        perfecto para ti.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Indicador de pasos -->
+            <ol class="test-steps">
+
+                <li class="test-step active">
+                    <span class="step-number">1</span>
+
+                    <div class="step-information">
+                        <h2>Grado de Estudio</h2>
+                        <p>Adaptamos los desafíos a tu nivel escolar.</p>
+                    </div>
+                </li>
+
+                <li class="test-step">
+                    <span class="step-number">2</span>
+
+                    <div class="step-information">
+                        <h2>Meta Diaria</h2>
+                        <p>Tú decides cuánto tiempo jugar al día.</p>
+                    </div>
+                </li>
+
+                <li class="test-step">
+                    <span class="step-number">3</span>
+
+                    <div class="step-information">
+                        <h2>Nivel Inicial</h2>
+                        <p>Elige una prueba de diagnóstico o empieza de cero.</p>
+                    </div>
+                </li>
+
+            </ol>
+
+        </aside>
+
+
+        <!-- PANEL DERECHO: CONFIGURACIÓN DEL TEST -->
+        <section class="login-container test-container">
+
+            <!-- Encabezado y progreso -->
+            <header class="test-header">
+
+                <div class="test-brand">
+                    <img
+                        src="img/LOGO MATHY HORIZONTAL-SIN FONDO.webp"
+                        alt="JAD"
+                        class="test-logo"
+                    >
+
+                    <span>Mathy</span>
+                </div>
+
+                <nav class="test-progress" aria-label="Progreso de configuración">
+                    <span class="progress-indicator active"></span>
+                    <span class="progress-indicator"></span>
+                    <span class="progress-indicator"></span>
+                </nav>
+
+            </header>
+
+
+            <!-- Selección del grado de estudio -->
+            <section class="test-content">
+
+                <div class="form-title-group">
+
+                    <h2 class="form-title">
+                        ¿En qué grado de estudio estás?
+                    </h2>
+
+                    <p class="form-subtitle">
+                        Adaptaremos los desafíos y temas de práctica
+                        a tu nivel escolar actual.
+                    </p>
+
+                </div>
+
+
+                <form class="login-form grade-form">
+
+                    <fieldset class="grade-options">
+
+                        <legend class="visually-hidden">
+                            Selecciona tu grado de estudio
+                        </legend>
+
+                        <!-- Opción primaria -->
+                        <label class="grade-option selected">
+
+                            <input
+                                type="radio"
+                                name="study-grade"
+                                value="primaria"
+                                checked
+                            >
+
+                            <span class="grade-letter">A</span>
+
+                            <span class="grade-information">
+                                <strong>Primaria</strong>
+
+                                <small>
+                                    Ideal para jóvenes de 8 a 11 años.
+                                    Conceptos básicos, juego guiado
+                                    y sumas divertidas.
+                                </small>
+                            </span>
+
+                        </label>
+
+
+                        <!-- Opción bachillerato -->
+                        <label class="grade-option">
+
+                            <input
+                                type="radio"
+                                name="study-grade"
+                                value="bachillerato"
+                            >
+
+                            <span class="grade-letter">B</span>
+
+                            <span class="grade-information">
+                                <strong>Bachillerato</strong>
+
+                                <small>
+                                    Para jóvenes de 12 a 15 años.
+                                    Desafíos lógicos, álgebra básica
+                                    y geometría espacial.
+                                </small>
+                            </span>
+
+                        </label>
+
+                    </fieldset>
+
+                </form>
+
+            </section>
+
+
+            <!-- Navegación entre pasos -->
+            <footer class="test-navigation">
+
+                <button type="button" class="btn-back">
+                    Atrás
+                </button>
+
+                <button type="button" class="btn-register">
+                    Siguiente
+                </button>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

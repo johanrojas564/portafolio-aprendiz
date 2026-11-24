@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JAD MATHY | Nivel Inicial</title>
+
+    <link rel="stylesheet" href="estilos_registros.css">
+</head>
+
+<body>
+
+    <main class="element-login-light">
+
+        <!-- PANEL IZQUIERDO: IDENTIDAD DE MARCA -->
+        <aside class="brand-banner">
+
+            <!-- Decoraciones matemáticas -->
+            <div class="math-decorations" aria-hidden="true">
+                <span class="math-badge plus">+</span>
+                <span class="math-badge minus">×</span>
+                <span class="math-badge divide">÷</span>
+                <span class="math-badge multiply">−</span>
+                <span class="math-badge pi">π</span>
+            </div>
+
+            <!-- Presentación de JAD MATHY -->
+            <section class="brand-content">
+
+                <img
+                    src="assets/img/logo-jad-mathy.png"
+                    alt="Logo de JAD Mathy"
+                    class="brand-logo"
+                >
+
+                <div>
+                    <h1 class="brand-title">
+                        ¡Tu aventura matemática te espera!
+                    </h1>
+
+                    <p class="brand-description">
+                        Completa estos rápidos pasos para que JAD
+                        el zorro cree el camino de aprendizaje
+                        perfecto para ti.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- INDICADOR DE LOS TRES PASOS -->
+            <ol class="test-steps">
+
+                <li class="test-step completed">
+                    <span class="step-number" aria-label="Completado">
+                        ✓
+                    </span>
+
+                    <div class="step-information">
+                        <h2>Grado de Estudio</h2>
+                        <p>Adaptamos los desafíos a tu nivel escolar.</p>
+                    </div>
+                </li>
+
+                <li class="test-step completed">
+                    <span class="step-number" aria-label="Completado">
+                        ✓
+                    </span>
+
+                    <div class="step-information">
+                        <h2>Meta Diaria</h2>
+                        <p>Tú decides cuánto tiempo jugar al día.</p>
+                    </div>
+                </li>
+
+                <li class="test-step active" aria-current="step">
+                    <span class="step-number">3</span>
+
+                    <div class="step-information">
+                        <h2>Nivel Inicial</h2>
+                        <p>Elige una prueba de diagnóstico o empieza de cero.</p>
+                    </div>
+                </li>
+
+            </ol>
+
+        </aside>
+
+
+        <!-- PANEL DERECHO: NIVEL INICIAL -->
+        <section class="login-container test-container">
+
+            <!-- ENCABEZADO -->
+            <header class="test-header">
+
+                <div class="test-brand">
+
+                    <img
+                        src="assets/img/logo-jad-mathy.png"
+                        alt="JAD"
+                        class="test-logo"
+                    >
+
+                    <span>Mathy</span>
+
+                </div>
+
+                <nav
+                    class="test-progress"
+                    aria-label="Progreso de configuración"
+                >
+                    <span class="progress-indicator completed"></span>
+                    <span class="progress-indicator completed"></span>
+                    <span class="progress-indicator active"></span>
+                </nav>
+
+            </header>
+
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <section class="test-content initial-content">
+
+                <div class="form-title-group">
+
+                    <h2 class="form-title">
+                        ¿Quieres empezar el test o quieres empezar desde cero?
+                    </h2>
+
+                    <p class="form-subtitle">
+                        Un pequeño diagnóstico nos ayuda a evitar que
+                        repitas temas que ya dominas. ¡Es totalmente opcional!
+                    </p>
+
+                </div>
+
+
+                <!-- ALTERNATIVAS DE APRENDIZAJE -->
+                <div class="initial-options">
+
+                    <!-- OPCIÓN: TEST RÁPIDO -->
+                    <article class="initial-option quick-test">
+
+                        <span class="initial-icon" aria-hidden="true">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5 12.5L10 17L19 7"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </span>
+
+                        <div class="initial-information">
+
+                            <h3>Hacer test rápido</h3>
+
+                            <p>
+                                10 preguntas dinámicas que medirán
+                                tu nivel actual de lógica y números.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- OPCIÓN: EMPEZAR DESDE CERO -->
+                    <article class="initial-option start-from-zero">
+
+                        <span class="initial-icon" aria-hidden="true">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="9"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                />
+
+                                <path
+                                    d="M9 9L15 15M15 9L9 15"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                />
+                            </svg>
+                        </span>
+
+                        <div class="initial-information">
+
+                            <h3>Empezar desde cero</h3>
+
+                            <p>
+                                Comienza desde la lección uno junto a JAD.
+                                Ideal si quieres repasar todo.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- BOTONES DE DECISIÓN -->
+            <footer class="initial-navigation">
+
+                <button
+                    type="button"
+                    class="btn-quick-test"
+                >
+                    Quiero empezar el test
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-start-from-zero"
+                >
+                    No gracias quiero empezar desde cero
+                </button>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
