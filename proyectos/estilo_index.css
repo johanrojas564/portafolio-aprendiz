@@ -1,0 +1,938 @@
+
+/* ==========================================================
+   MATHY - HOJA DE ESTILOS- PAGINA PRINCIPAL
+   1. Variables
+   2. Base
+   3. Contenedores y utilidades
+   4. Botones
+   5. Encabezado 
+   6. Hero
+   7. Secciones 
+   8. Tarjetas
+   9. Informacion adicional
+   10. Formularios 
+   11. Pie de pagina  
+   ========================================================== */
+
+
+/* 1. VARIABLES */
+
+:root {
+
+    /* Colores principales */
+    --color-azul: #245B86;
+    --color-azul-oscuro: #194565;
+
+    --color-verde: #319B75;
+    --color-verde-oscuro: #237657;
+
+    /* Fondos */
+    --color-fondo: #F7F9F6;
+    --color-fondo-alterno: #EDF4F0;
+    --color-blanco: #FFFFFF;
+
+    /* Textos */
+    --color-texto: #263746;
+    --color-texto-suave: #687984;
+    --color-texto-claro: #FFFFFF;
+
+    /* Bordes y elementos secundarios */
+    --color-borde: #DCE5E0;
+    --color-secundario: #DCEAE4;
+
+    /* Otros */
+    --radio: 14px;
+    --sombra: 0 4px 15px rgba(36, 91, 134, 0.10);
+
+}
+
+
+/* 2. BASE */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    color: var(--color-azul-oscuro);
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 0 0 1rem;
+    color: var(--color-azul);
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem;
+    color: var(--color-azul-oscuro);
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--color-azul);
+}
+
+a:hover {
+    color: var(--color-verde-oscuro);
+}
+
+/* Accesibilidad: foco visible */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-verde);
+    outline-offset: 4px;
+}
+
+
+/* 3. CONTENEDORES Y UTILIDADES */
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Enlace para saltar directamente al contenido */
+
+.saltar-contenido {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    z-index: 100;
+}
+
+.saltar-contenido:focus {
+    left: 0;
+}
+/* ==========================================================
+   4. BOTONES Y ESTADOS
+   ========================================================== */
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-verde);
+    color: var(--color-blanco);
+
+    padding: 0.85rem 1.8rem;
+
+    border: 2px solid var(--color-verde);
+    border-radius: 999px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+
+    text-decoration: none;
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: var(--sombra);
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+}
+
+.boton:hover {
+    background-color: var(--color-verde-oscuro);
+    border-color: var(--color-verde-oscuro);
+    color: var(--color-blanco);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(49, 155, 117, 0.25);
+}
+
+.boton:focus-visible {
+    outline: 3px solid var(--color-azul);
+    outline-offset: 4px;
+}
+
+.boton:active {
+    transform: translateY(0);
+}
+
+/* Respeta las preferencias de movimiento del usuario */
+
+@media (prefers-reduced-motion: reduce) {
+    .boton {
+        transition: none;
+    }
+
+    .boton:hover {
+        transform: none;
+    }
+}
+/* ==========================================================
+   5. ENCABEZADO Y NAVEGACIÓN
+   ========================================================== */
+
+.encabezado {
+    background-color: var(--color-blanco);
+
+    border-bottom: 1px solid var(--color-borde);
+
+    padding: 0.8rem 0;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 2px 10px rgba(36, 91, 134, 0.05);
+}
+
+/* Distribución del logo y menú */
+
+.encabezado .contenedor {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Logo */
+
+.logo {
+    display: block;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: 130px;
+    height: auto;
+}
+
+/* Menú de navegación */
+
+.menu-navegacion ul {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.menu-navegacion a {
+    display: inline-block;
+
+    padding: 0.65rem 1rem;
+
+    color: var(--color-azul);
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    border-radius: 8px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.menu-navegacion a:hover,
+.menu-navegacion a:focus-visible {
+    background-color: var(--color-fondo-alterno);
+    color: var(--color-verde-oscuro);
+}
+
+/* Diferenciar el registro */
+
+.menu-navegacion li:last-child a:hover {
+    background-color: var(--color-azul-oscuro);
+    color: var(--color-blanco);
+}
+/* ==========================================================
+   6. PRESENTACIÓN PRINCIPAL (HERO)
+   ========================================================== */
+
+.hero {
+    background:
+        linear-gradient(
+            120deg,
+            #EDF4F0 0%,
+            #F7F9F6 65%,
+            #E7F2EC 100%
+        );
+
+    min-height: 75vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5rem 0;
+}
+
+/* Distribución del contenido */
+
+.hero .contenedor {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Texto principal */
+
+.hero-texto {
+    max-width: 560px;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+
+    color: var(--color-azul-oscuro);
+
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    max-width: 52ch;
+
+    font-size: 1.15rem;
+    line-height: 1.7;
+
+    color: var(--color-texto-suave);
+
+    margin-bottom: 2rem;
+}
+
+/* Espacio para la ilustración */
+
+.hero-imagen {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 300px;
+}
+
+/* Imagen de presentación */
+
+.hero-imagen img {
+    display: block;
+
+    width: 100%;
+    max-width: 480px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* ==========================================================
+   7. SECCIONES GENERALES
+   ========================================================== */
+
+/* Espaciado general de las secciones */
+
+.seccion-nosotros,
+.seccion-beneficios {
+    padding: 5rem 0;
+}
+
+/* Sección sobre nosotros */
+
+.seccion-nosotros {
+    background-color: var(--color-blanco);
+}
+
+/* Sección de beneficios */
+
+.seccion-beneficios {
+    background-color: var(--color-fondo-alterno);
+}
+
+/* Títulos de las secciones */
+
+.seccion-nosotros h2,
+.seccion-beneficios h2 {
+    text-align: center;
+
+    color: var(--color-azul);
+
+    margin-bottom: 1.5rem;
+}
+
+/* Línea decorativa debajo de los títulos */
+
+.seccion-nosotros h2::after,
+.seccion-beneficios h2::after {
+    content: "";
+
+    display: block;
+
+    width: 65px;
+    height: 4px;
+
+    background-color: var(--color-verde);
+
+    border-radius: 999px;
+
+    margin: 0.75rem auto 0;
+}
+
+/* Párrafos de presentación */
+
+.seccion-nosotros p {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: var(--color-texto-suave);
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ==========================================================
+   8. TARJETAS Y BENEFICIOS
+   ========================================================== */
+
+/* Contenedor de tarjetas */
+
+.tarjetas {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+
+    gap: 1.5rem;
+
+    margin-top: 2.5rem;
+}
+
+/* Tarjetas individuales */
+
+.tarjeta {
+    background-color: var(--color-blanco);
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: var(--radio);
+
+    padding: 2rem 1.5rem;
+
+    box-shadow: var(--sombra);
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* Efecto al pasar el cursor */
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--color-verde);
+
+    box-shadow: 0 8px 22px rgba(36, 91, 134, 0.13);
+}
+
+/* Títulos de las tarjetas */
+
+.tarjeta h3 {
+    color: var(--color-azul);
+
+    font-size: 1.35rem;
+
+    margin-bottom: 1rem;
+}
+
+/* Descripción de las tarjetas */
+
+.tarjeta p {
+    color: var(--color-texto-suave);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+/* Imágenes o iconos dentro de las tarjetas */
+
+.tarjeta img {
+    display: block;
+
+    width: 75px;
+    height: 75px;
+
+    object-fit: contain;
+
+    margin: 0 auto 1.25rem;
+}
+
+/* Accesibilidad: reducir movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    .tarjeta {
+        transition: none;
+    }
+
+    .tarjeta:hover {
+        transform: none;
+    }
+}
+
+
+/* ==========================================================
+   9. INFORMACIÓN ADICIONAL
+   ========================================================== */
+
+/* Distribución de contenido en columnas */
+
+.columnas {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.texto-informacion {
+    flex: 2;
+    color: var(--color-texto-suave);
+}
+
+/* Contenedor de información destacada */
+
+.informacion-destacada {
+    flex: 1;
+
+    background-color: var(--color-fondo-alterno);
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: var(--radio);
+
+    padding: 1.5rem;
+
+    box-shadow: var(--sombra);
+}
+
+/* Imágenes de información */
+
+.sala-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2rem;
+
+    align-items: center;
+
+    margin-top: 2rem;
+}
+
+.sala-info {
+    background-color: var(--color-blanco);
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: var(--radio);
+
+    padding: 2rem;
+
+    box-shadow: var(--sombra);
+}
+
+.sala-imagen img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: var(--radio);
+}
+
+/* Contenedor para tablas */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-servicios {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: var(--color-blanco);
+
+    box-shadow: var(--sombra);
+}
+
+.tabla-servicios th,
+.tabla-servicios td {
+    padding: 0.85rem 1rem;
+
+    text-align: left;
+
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.tabla-servicios th {
+    background-color: var(--color-fondo-alterno);
+
+    color: var(--color-azul-oscuro);
+}
+
+.tabla-servicios tbody tr:hover {
+    background-color: var(--color-fondo-alterno);
+}
+
+/* ==========================================================
+   10. FORMULARIOS
+   ========================================================== */
+
+.formulario {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 1.5rem;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+/* Campos */
+
+.campo {
+    margin-bottom: 1.25rem;
+}
+
+.campo label {
+    display: block;
+
+    font-weight: 700;
+
+    color: var(--color-azul-oscuro);
+
+    margin-bottom: 0.4rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 0.8rem 1rem;
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: 8px;
+
+    background-color: var(--color-blanco);
+
+    color: var(--color-texto);
+
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 3px solid var(--color-secundario);
+
+    border-color: var(--color-verde);
+}
+
+/* Casillas de verificación */
+
+.campo-check input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.campo-check label {
+    display: inline;
+    font-weight: 400;
+}
+
+/* Mensajes informativos */
+
+.aviso {
+    max-width: 600px;
+
+    padding: 1rem;
+
+    border: 1px solid var(--color-verde);
+
+    border-left: 5px solid var(--color-verde);
+
+    border-radius: var(--radio);
+
+    background-color: var(--color-fondo-alterno);
+
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================
+   11. PIE DE PÁGINA
+   ========================================================== */
+
+footer {
+    background-color: var(--color-azul-oscuro);
+
+    color: var(--color-blanco);
+
+    padding: 3rem 0;
+}
+
+footer h2 {
+    color: var(--color-blanco);
+
+    font-size: 1.7rem;
+}
+
+footer p {
+    color: #E2EBF0;
+}
+
+footer a {
+    color: var(--color-blanco);
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #A9E4C8;
+
+    text-decoration: underline;
+}
+
+footer .contenedor {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+}
+
+/* ==========================================================
+   12. RESPONSIVE
+   ========================================================== */
+
+
+/* TABLETAS */
+
+@media (max-width: 900px) {
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    .hero .contenedor {
+        gap: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    /* Tarjetas */
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    /* Encabezado */
+
+    .encabezado .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 115px;
+    }
+
+    .menu-navegacion ul {
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .menu-navegacion a {
+        padding: 0.5rem 0.65rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding: 3.5rem 0;
+    }
+
+    .hero .contenedor {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 2rem;
+    }
+
+    .hero-texto {
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-imagen {
+        min-height: 200px;
+    }
+
+    /* Secciones */
+
+    .seccion-nosotros,
+    .seccion-beneficios {
+        padding: 3rem 0;
+    }
+
+    .seccion-nosotros h2,
+    .seccion-beneficios h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Tarjetas */
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta {
+        padding: 1.5rem;
+    }
+
+    /* Columnas */
+
+    .columnas {
+        flex-direction: column;
+    }
+
+    .sala-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Formularios */
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+
+    /* Footer */
+
+    footer .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+/* REDUCCIÓN DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}
