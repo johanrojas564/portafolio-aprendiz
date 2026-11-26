@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemáticas | Operaciones básicas</title>
+    <link rel="stylesheet" href="estiloSelectores.css">
+</head>
+
+<body>
+
+    <main class="course-container" id="course-container">
+
+        <!-- Encabezado del módulo -->
+        <header class="course-header">
+
+            <div class="course-heading">
+
+                <button
+                    class="back-button"
+                    id="back-button"
+                    type="button"
+                    aria-label="Volver a los módulos"
+                >
+                    &#8592;
+                </button>
+
+                <div class="course-title-group">
+                    <span class="course-category">MATERIA: MATEMÁTICAS</span>
+                    <h1 class="course-title">Operaciones básicas</h1>
+                </div>
+
+            </div>
+
+            <!-- Progreso general -->
+            <div class="course-progress" id="course-progress">
+
+                <span class="progress-label">
+                    Progreso del módulo:
+                    <strong id="progress-percentage">0%</strong>
+                </span>
+
+                <div
+                    class="progress-track"
+                    role="progressbar"
+                    aria-label="Progreso del módulo"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                    id="progress-bar"
+                >
+                    <div
+                        class="progress-fill"
+                        id="progress-fill"
+                    ></div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Lecciones del módulo -->
+        <section
+            class="lessons-section"
+            aria-label="Lecciones del módulo"
+        >
+
+            <div class="lessons-grid">
+
+                <!-- Lección 1: Disponible -->
+                <article
+                    class="lesson-card lesson-card--available"
+                    id="lesson-basic-operations"
+                    data-lesson-id="basic-operations"
+                    data-lesson-order="1"
+                    data-status="available"
+                >
+
+                    <div class="lesson-icon">
+                        <span class="star-icon" aria-hidden="true">☆</span>
+                    </div>
+
+                    <div class="lesson-content">
+                        <h2 class="lesson-title">
+                            Operaciones básicas
+                        </h2>
+
+                        <p class="lesson-description">
+                            Aprende a sumar, restar, multiplicar y dividir.
+                        </p>
+                    </div>
+
+                    <button
+                        class="lesson-button"
+                        id="start-basic-operations"
+                        type="button"
+                        data-action="start-lesson"
+                        data-lesson-id="basic-operations"
+                    >
+                        Comenzar
+                        <span aria-hidden="true">➜</span>
+                    </button>
+
+                </article>
+
+
+                <!-- Lección 2: Bloqueada -->
+                <article
+                    class="lesson-card lesson-card--locked"
+                    id="lesson-properties"
+                    data-lesson-id="properties"
+                    data-lesson-order="2"
+                    data-status="locked"
+                    aria-disabled="true"
+                >
+
+                    <div class="lesson-icon">
+                        <span class="star-icon" aria-hidden="true">☆</span>
+                    </div>
+
+                    <div class="lesson-content">
+                        <h2 class="lesson-title">
+                            Propiedades de las operaciones
+                        </h2>
+
+                        <p class="lesson-description">
+                            Descubre las propiedades que facilitan
+                            los cálculos matemáticos.
+                        </p>
+                    </div>
+
+                    <div class="lesson-button lesson-button--locked">
+                        Bloqueado
+                        <span class="lock-icon" aria-hidden="true">♙</span>
+                    </div>
+
+                </article>
+
+
+                <!-- Lección 3: Bloqueada -->
+                <article
+                    class="lesson-card lesson-card--locked"
+                    id="lesson-fractions"
+                    data-lesson-id="fractions"
+                    data-lesson-order="3"
+                    data-status="locked"
+                    aria-disabled="true"
+                >
+
+                    <div class="lesson-icon">
+                        <span class="star-icon" aria-hidden="true">☆</span>
+                    </div>
+
+                    <div class="lesson-content">
+                        <h2 class="lesson-title">
+                            Fraccionarios
+                        </h2>
+
+                        <p class="lesson-description">
+                            Aprende a representar y resolver
+                            operaciones con fracciones.
+                        </p>
+                    </div>
+
+                    <div class="lesson-button lesson-button--locked">
+                        Bloqueado
+                        <span class="lock-icon" aria-hidden="true">♙</span>
+                    </div>
+
+                </article>
+
+
+                <!-- Lección 4: Bloqueada -->
+                <article
+                    class="lesson-card lesson-card--locked"
+                    id="lesson-decimals"
+                    data-lesson-id="decimals"
+                    data-lesson-order="4"
+                    data-status="locked"
+                    aria-disabled="true"
+                >
+
+                    <div class="lesson-icon">
+                        <span class="star-icon" aria-hidden="true">☆</span>
+                    </div>
+
+                    <div class="lesson-content">
+                        <h2 class="lesson-title">
+                            Decimales
+                        </h2>
+
+                        <p class="lesson-description">
+                            Comprende los números decimales y
+                            aprende a operar con ellos.
+                        </p>
+                    </div>
+
+                    <div class="lesson-button lesson-button--locked">
+                        Bloqueado
+                        <span class="lock-icon" aria-hidden="true">♙</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Evaluación final -->
+        <section
+            class="evaluation-section"
+            id="evaluation-section"
+            aria-labelledby="evaluation-title"
+        >
+
+            <div class="evaluation-card" 
+                 id="final-evaluation"
+                 data-evaluation-id="final"
+                 data-status="locked"
+                 aria-disabled="true">
+
+                <div class="evaluation-info">
+
+                    <div class="evaluation-icon">
+                        <span aria-hidden="true">★</span>
+                    </div>
+
+                    <div class="evaluation-content">
+
+                        <span class="evaluation-tag">
+                            RETO FINAL
+                        </span>
+
+                        <h2 id="evaluation-title">
+                            Evaluación del módulo
+                        </h2>
+
+                        <p>
+                            Demuestra todo lo que aprendiste
+                            en las cuatro lecciones.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="evaluation-button"
+                    id="evaluation-button"
+                    type="button"
+                    disabled
+                    data-action="start-evaluation"
+                >
+                    <span id="evaluation-button-text">
+                        Completa las 4 lecciones
+                    </span>
+                    <span aria-hidden="true">🔒</span>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

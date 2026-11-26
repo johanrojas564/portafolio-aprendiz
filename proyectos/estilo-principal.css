@@ -1,0 +1,646 @@
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1976d2;
+    --primary-dark: #1263b5;
+    --background-color: #f4f6f9;
+    --white: #ffffff;
+    --text-color: #242424;
+    --text-secondary: #777777;
+    --border-color: #e5e7eb;
+
+    --border-radius: 13px;
+    --transition: 0.25s ease;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.main-header {
+    height: 64px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+    position: relative;
+    z-index: 100;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    min-width: 0;
+}
+
+.brand-icon {
+    width: 50rem;
+    height: auto;
+
+    display: block;
+    object-fit: contain;
+
+    flex-shrink: 0;
+    max-width: 100px;
+}
+
+.brand-name {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
+
+/* =========================
+   BOTÓN HAMBURGUESA
+========================= */
+
+.icon-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburger-button {
+    width: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-button span {
+    width: 21px;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.hamburger-button:hover span {
+    background-color: var(--primary-dark);
+}
+
+
+/* =========================
+   MENÚ DESPLEGABLE
+========================= */
+
+.navigation-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 290px;
+    height: 100vh;
+
+    background-color: var(--white);
+    padding: 25px;
+
+    z-index: 200;
+
+    transform: translateX(-100%);
+    transition: transform var(--transition);
+
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.08);
+}
+
+.navigation-menu.active {
+    transform: translateX(0);
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.menu-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-brand h2 {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.menu-brand p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.close-menu-button {
+    border: none;
+    background: none;
+    font-size: 27px;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.navigation-list {
+    list-style: none;
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navigation-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 13px;
+    text-decoration: none;
+
+    font-size: 14px;
+    color: #444;
+
+    border-radius: 9px;
+    transition: var(--transition);
+}
+
+.navigation-link span {
+    font-size: 18px;
+}
+
+.navigation-link:hover,
+.navigation-link.active {
+    background-color: #edf5ff;
+    color: var(--primary-color);
+}
+
+
+/* Fondo del menú */
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: var(--transition);
+    z-index: 150;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   PERFIL DE USUARIO
+========================= */
+
+.user-menu-container {
+    position: relative;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 48px;
+    right: 0;
+
+    width: 205px;
+    padding: 12px;
+
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+
+    transition: var(--transition);
+    z-index: 300;
+}
+
+.user-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.user-dropdown-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 8px;
+}
+
+.user-dropdown-header strong {
+    font-size: 13px;
+}
+
+.user-dropdown-header span {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.dropdown-link {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px;
+    border: none;
+    border-radius: 7px;
+
+    background: none;
+    text-decoration: none;
+
+    font-size: 13px;
+    color: #444;
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.dropdown-link:hover {
+    background-color: #f0f5fc;
+}
+
+.logout-button {
+    color: #dc4545;
+    text-align: left;
+}
+
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+.dashboard-container {
+    max-width: 1500px;
+    margin: 0 auto;
+
+    padding: 30px 35px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 25px;
+}
+
+.dashboard-content {
+    min-width: 0;
+}
+
+
+/* =========================
+   BIENVENIDA
+========================= */
+
+.welcome-section {
+    margin-bottom: 17px;
+}
+
+.welcome-section h1 {
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.welcome-section p {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+
+/* =========================
+   BANNER DE APRENDIZAJE
+========================= */
+
+.learning-banner {
+    min-height: 120px;
+
+    padding: 22px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+
+    color: var(--white);
+    margin-bottom: 25px;
+}
+
+.banner-content h2 {
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+.banner-content p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.banner-button {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background-color: #ff9800;
+    border-radius: 50%;
+
+    color: var(--white);
+    text-decoration: none;
+    font-size: 25px;
+
+    transition: var(--transition);
+}
+
+.banner-button:hover {
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   MATERIAS
+========================= */
+
+.section-title {
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.subject-card {
+    grid-column: span 2;
+
+    min-height: 120px;
+    padding: 15px;
+
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+/* Las dos primeras tarjetas ocupan la mitad */
+
+.subject-card:nth-child(1),
+.subject-card:nth-child(2) {
+    grid-column: span 3;
+}
+
+.subject-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.subject-icon {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.subject-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.subject-card p {
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+
+
+/* Colores de las materias */
+
+.arithmetic-icon {
+    color: #1976d2;
+    background: #e6f1ff;
+}
+
+.algebra-icon {
+    color: #ff9800;
+    background: #fff0d9;
+}
+
+.geometry-icon {
+    color: #4caf50;
+    background: #e5f5e8;
+}
+
+.statistics-icon {
+    color: #ab47bc;
+    background: #f5e5f8;
+}
+
+.logic-icon {
+    color: #00acc1;
+    background: #ddf7fa;
+}
+
+
+/* =========================
+   TARJETA MASCOTA
+========================= */
+
+.mascot-section {
+    align-self: start;
+}
+
+.mascot-card {
+    padding: 20px;
+
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.mascot-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mascot-image {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.mascot-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mascot-information h2 {
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.mascot-information p {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.mascot-message {
+    padding-top: 15px;
+}
+
+.mascot-message p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mascot-section {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .main-header {
+        padding: 0 16px;
+    }
+
+    .dashboard-container {
+        padding: 23px 16px;
+        gap: 20px;
+    }
+
+    .welcome-section h1 {
+        font-size: 21px;
+    }
+
+    .learning-banner {
+        min-height: 130px;
+        padding: 18px 15px;
+    }
+
+    .banner-content h2 {
+        font-size: 17px;
+    }
+
+    .banner-content p {
+        font-size: 11px;
+    }
+
+    .subjects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .subject-card,
+    .subject-card:nth-child(1),
+    .subject-card:nth-child(2) {
+        grid-column: span 1;
+    }
+
+    .navigation-menu {
+        width: min(290px, 85vw);
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathy | Plataforma de aprendizaje</title>
+
+    <link rel="stylesheet" href="estilo-principal.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO PRINCIPAL
+    ========================== -->
+    <header class="main-header" id="main-header">
+
+        <div class="header-brand">
+
+            <!-- Botón para abrir el menú -->
+            <button
+                class="icon-button hamburger-button"
+                id="hamburger-button"
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="navigation-menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+            <!-- Identidad de Mathy -->
+          <a href="#dashboard" class="brand-link">
+        <img
+        src="img/LOGO MATHY HORIZONTAL-SIN FONDO.webp"
+        alt="Logo de Mathy"
+        class="brand-icon">
+        </a>
+        </div>
+
+
+        <!-- =========================
+             MENÚ DE NAVEGACIÓN
+        ========================== -->
+        <nav
+            class="navigation-menu"
+            id="navigation-menu"
+            aria-label="Navegación principal"
+            aria-hidden="true">
+
+            <div class="menu-header">
+
+                <div class="menu-brand">
+                    <span class="brand-icon">🦊</span>
+
+                    <div>
+                        <h2>Mathy</h2>
+                        <p>Menú principal</p>
+                    </div>
+                </div>
+
+                <button
+                    class="close-menu-button"
+                    id="close-menu-button"
+                    aria-label="Cerrar menú">
+
+                    &times;
+
+                </button>
+
+            </div>
+
+            <ul class="navigation-list">
+
+                <li>
+                    <a href="#dashboard" class="navigation-link active">
+                        <span>⌂</span>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#materias" class="navigation-link">
+                        <span>▦</span>
+                        Módulos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#logros" class="navigation-link">
+                        <span>🏆</span>
+                        Logros
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#perfil" class="navigation-link">
+                        <span>♙</span>
+                        Mi perfil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#configuracion" class="navigation-link">
+                        <span>⚙</span>
+                        Configuración
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#historial" class="navigation-link">
+                        <span>◷</span>
+                        Historial de práctica
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Fondo oscuro del menú -->
+        <div class="menu-overlay" id="menu-overlay"></div>
+
+
+        <!-- =========================
+             MENÚ DE USUARIO
+        ========================== -->
+        <div class="user-menu-container">
+
+            <button
+                class="user-avatar"
+                id="user-avatar"
+                aria-label="Abrir opciones de usuario"
+                aria-expanded="false"
+                aria-controls="user-dropdown">
+
+                
+
+            </button>
+
+            <div
+                class="user-dropdown"
+                id="user-dropdown"
+                aria-hidden="true">
+
+                <div class="user-dropdown-header">
+                    <strong>Hola, Usuario</strong>
+                    <span>Bienvenido a Mathy</span>
+                </div>
+
+                <a href="#perfil" class="dropdown-link">
+                    <span>♙</span>
+                    Mi perfil
+                </a>
+
+                <button class="dropdown-link logout-button" id="logout-button">
+                    <span>↪</span>
+                    Cerrar sesión
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+    <main class="dashboard-container" id="dashboard">
+
+        <section class="dashboard-content">
+
+            <!-- Saludo -->
+            <section class="welcome-section">
+
+                <h1>¡Hola, Usuario!</h1>
+
+                <p>
+                    Retomemos donde nos quedamos
+                </p>
+
+            </section>
+
+
+            <!-- Banner de aprendizaje -->
+            <section class="learning-banner">
+
+                <div class="banner-content">
+
+                    <h2>¡Sigue aprendiendo!</h2>
+
+                    <p>
+                        Explora los módulos y mejora tus habilidades
+                        para subir en el ranking semanal de Mathy.
+                    </p>
+
+                </div>
+
+                <a href="#materias"
+                   class="banner-button"
+                   aria-label="Explorar materias">
+
+                    →
+
+                </a>
+
+            </section>
+
+
+            <!-- =========================
+                 MATERIAS DE APRENDIZAJE
+            ========================== -->
+            <section class="subjects-section" id="materias">
+
+                <h2 class="section-title">
+                    Materias de Aprendizaje
+                </h2>
+
+                <div class="subjects-grid">
+
+                    <!-- Aritmética -->
+                    <article class="subject-card">
+
+                        <div class="subject-icon arithmetic-icon">
+                            +
+                        </div>
+
+                        <h3>Aritmética</h3>
+
+                        <p>
+                            Números, sumas y restas fantásticas
+                        </p>
+
+                    </article>
+
+
+                    <!-- Álgebra -->
+                    <article class="subject-card">
+
+                        <div class="subject-icon algebra-icon">
+                            ▦
+                        </div>
+
+                        <h3>Álgebra</h3>
+
+                        <p>
+                            Encuentra el valor misterioso de X
+                        </p>
+
+                    </article>
+
+
+                    <!-- Geometría -->
+                    <article class="subject-card">
+
+                        <div class="subject-icon geometry-icon">
+                            △
+                        </div>
+
+                        <h3>Geometría</h3>
+
+                        <p>
+                            Formas, ángulos y dimensiones espaciales
+                        </p>
+
+                    </article>
+
+
+                    <!-- Estadística -->
+                    <article class="subject-card">
+
+                        <div class="subject-icon statistics-icon">
+                            ▥
+                        </div>
+
+                        <h3>Estadística</h3>
+
+                        <p>
+                            Gráficos, probabilidad y análisis de datos
+                        </p>
+
+                    </article>
+
+
+                    <!-- Pensamiento lógico -->
+                    <article class="subject-card">
+
+                        <div class="subject-icon logic-icon">
+                            ∿
+                        </div>
+
+                        <h3>Pensamiento Lógico</h3>
+
+                        <p>
+                            Puzles matemáticos y acertijos cerebrales
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- =========================
+             TARJETA DE LA MASCOTA
+        ========================== -->
+        <aside class="mascot-section" aria-label="Asistente Mathy">
+
+            <div class="mascot-card">
+
+                <div class="mascot-header">
+
+                    <div class="mascot-image">
+                        <img
+                            src="img/LOGO-MATHY-ORIGINAL_SINFONDO-.webp"
+                            alt="Mathy, el zorro asistente">
+                    </div>
+
+                    <div class="mascot-information">
+
+                        <h2>Mathy</h2>
+
+                        <p>
+                            ¡Tu tutor de la lista!
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="mascot-message">
+
+                    <p>
+                        ¡Hola! Soy Mathy.
+                        Estoy aquí para ayudarte a aprender.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
