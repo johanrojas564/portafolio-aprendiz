@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Permite adaptar la página a celulares y tabletas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JAD | Evaluación diagnóstica</title>
+
+    <!-- Conexión con la hoja de estilos CSS -->
+    <link rel="stylesheet" href="estiloLeccion.css">
+
+    <!-- Conexión con el archivo JavaScript -->
+    <script src="leccion.js" defer></script>
+</head>
+
+<body>
+
+    <main class="layout">
+
+        <!-- TARJETA PRINCIPAL -->
+        <section class="main-card">
+
+            <!-- ENCABEZADO Y PROGRESO -->
+            <header class="header">
+
+                <div class="brand">
+                    <span class="brand-icon">✳</span>
+                    <span>Evaluación diagnóstica </span>
+                </div>
+
+                <span class="progress-text" id="progressText">
+                    Pregunta 0/10
+                </span>
+
+            </header>
+
+            <!-- BARRA DE PROGRESO -->
+            <div class="progress-track">
+                <div
+                    class="progress-fill"
+                    id="progressFill">
+                </div>
+            </div>
+
+
+            <!-- INTRODUCCIÓN -->
+            <section id="introScreen" class="screen active">
+
+                <h1>¡Vamos a conocer tus habilidades!</h1>
+
+                <p class="subtitle">
+                    Antes de comenzar tu aventura de aprendizaje,
+                    queremos conocer qué tanto sabes de matemáticas.
+                </p>
+
+                <div class="intro-box">
+
+                    <h3>¿Qué vamos a evaluar?</h3>
+
+                    <div class="area-item">
+                        <span>🔢</span>
+                        <div>
+                            <strong>Aritmética</strong>
+                            <p>Operaciones, fracciones y números decimales.</p>
+                        </div>
+                    </div>
+
+                    <div class="area-item">
+                        <span>📐</span>
+                        <div>
+                            <strong>Geometría</strong>
+                            <p>Figuras, perímetros y áreas.</p>
+                        </div>
+                    </div>
+
+                    <div class="area-item">
+                        <span>🔤</span>
+                        <div>
+                            <strong>Álgebra</strong>
+                            <p>Patrones y ecuaciones sencillas.</p>
+                        </div>
+                    </div>
+
+                    <div class="area-item">
+                        <span>📊</span>
+                        <div>
+                            <strong>Estadística</strong>
+                            <p>Promedios, datos y frecuencias.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="notice">
+                    💡 Esta evaluación no es para ponerte una nota.
+                    Nos ayudará a descubrir qué sabes y qué podemos
+                    mejorar juntos.
+                </div>
+
+                <button
+                    class="primary-button"
+                    id="startButton">
+                    Comenzar evaluación →
+                </button>
+
+            </section>
+
+
+            <!-- PANTALLA DE PREGUNTAS -->
+            <section id="quizScreen" class="screen">
+
+                <div class="question-category" id="questionCategory">
+                    ARITMÉTICA
+                </div>
+
+                <h2 id="questionNumber">Pregunta 1</h2>
+
+                <p class="question-text" id="questionText">
+                    Aquí aparecerá la pregunta.
+                </p>
+
+                <!-- Opciones generadas dinámicamente por JavaScript -->
+                <div
+                    class="options-container"
+                    id="optionsContainer">
+                </div>
+
+                <p class="selection-message" id="selectionMessage"
+                   aria-live="polite">
+                </p>
+
+                <!-- NAVEGACIÓN ENTRE PREGUNTAS -->
+                <div class="navigation">
+
+                    <button
+                        class="secondary-button"
+                        id="previousButton">
+                        ← Anterior
+                    </button>
+
+                    <button
+                        class="primary-button"
+                        id="nextButton">
+                        Siguiente →
+                    </button>
+
+                    <button
+                        class="primary-button hidden"
+                        id="finishButton">
+                        Finalizar evaluación ✓
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- PANTALLA DE RESULTADOS -->
+            <section id="resultsScreen" class="screen">
+
+                <div class="result-icon">🏆</div>
+
+                <h1>¡Evaluación completada!</h1>
+
+                <p class="subtitle">
+                    Ya conocemos un poco más sobre tus habilidades
+                    matemáticas. Estos son tus resultados.
+                </p>
+
+                <div class="score-card">
+
+                    <span>Resultado general</span>
+
+                    <strong id="totalScore">0/10</strong>
+
+                    <div class="score-bar">
+                        <div id="scoreFill"></div>
+                    </div>
+
+                </div>
+
+                <h3>Resultados por área</h3>
+
+                <div id="areaResults"></div>
+
+                <div class="diagnosis-box">
+
+                    <h3>Tu punto de partida</h3>
+
+                    <p id="diagnosisText"></p>
+
+                </div>
+
+                <button
+                    class="primary-button"
+                    id="restartButton">
+                    Volver a comenzar
+                </button>
+
+            </section>
+
+        </section>
+
+
+        <!-- PANEL LATERAL DE CONSEJOS -->
+        <aside class="tip-card">
+
+            <div class="tip-header">
+
+                <span class="tip-icon"g>💡</span>
+
+                <div>
+                    <strong>Consejo</strong>
+                    <small>¡Tu aliado de aprendizaje!</small>
+                </div>
+
+            </div>
+
+            <p id="tipText">
+                No te preocupes si alguna pregunta parece difícil.
+                Responde con lo que sabes. Queremos conocer tu
+                punto de partida.
+            </p>
+
+            <p class="encouragement" id="encouragementText">
+                ¡Confía en tus conocimientos!
+            </p>
+
+        </aside>
+
+    </main>
+
+</body>
+</html>

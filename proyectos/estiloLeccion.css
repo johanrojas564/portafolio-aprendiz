@@ -1,0 +1,540 @@
+/*Este css */
+/* ==========================================
+   1. VARIABLES DE DISEÑO
+   Aquí puedes cambiar los colores generales
+   de toda la plataforma.
+========================================== */
+
+:root {
+    --primary: #1976d2;
+    --primary-dark: #125eaa;
+
+    --background: #f4f6fa;
+    --white: #ffffff;
+
+    --text: #252525;
+    --muted: #6b6b6b;
+
+    --border: #dedede;
+
+    --success: #36a950;
+    --success-bg: #e8f6eb;
+
+    --warning: #f39a16;
+    --warning-bg: #fff3df;
+}
+
+
+/* ==========================================
+   2. CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==========================================
+   3. DISTRIBUCIÓN PRINCIPAL
+   Dos columnas: contenido y consejos.
+========================================== */
+
+.layout {
+    max-width: 1160px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* ==========================================
+   4. TARJETAS PRINCIPALES
+========================================== */
+
+.main-card,
+.tip-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    padding: 35px;
+}
+
+.tip-card {
+    padding: 27px;
+}
+
+
+/* ==========================================
+   5. ENCABEZADO
+========================================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 22px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--muted);
+}
+
+.brand-icon {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.progress-text {
+    background: #edf4ff;
+    color: var(--primary);
+
+    padding: 9px 13px;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   6. BARRA DE PROGRESO
+========================================== */
+
+.progress-track,
+.score-bar {
+    height: 7px;
+    background: #e8edf3;
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-track {
+    margin-top: 18px;
+}
+
+.progress-fill,
+#scoreFill {
+    height: 100%;
+    width: 0%;
+
+    background: var(--primary);
+
+    transition: width 0.3s ease;
+}
+
+
+/* ==========================================
+   7. TÍTULOS Y TEXTOS
+========================================== */
+
+h1 {
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+h3 {
+    font-size: 17px;
+}
+
+.subtitle {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.question-text {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 20px 0 25px;
+}
+
+
+/* ==========================================
+   8. PANTALLAS
+   JavaScript activa una pantalla a la vez.
+========================================== */
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ==========================================
+   9. INTRODUCCIÓN
+========================================== */
+
+.intro-box {
+    background: #f8f9fc;
+
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    padding: 22px;
+    margin: 25px 0;
+}
+
+.area-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+    margin: 18px 0;
+}
+
+.area-item span {
+    font-size: 25px;
+}
+
+.area-item strong {
+    font-size: 14px;
+}
+
+.area-item p {
+    margin: 5px 0 0;
+
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.notice {
+    background: var(--warning-bg);
+    color: #a96800;
+
+    padding: 15px;
+    border-radius: 12px;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   10. CATEGORÍA DE CADA PREGUNTA
+========================================== */
+
+.question-category {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 8px 12px;
+
+    background: #edf4ff;
+    color: var(--primary);
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+/* ==========================================
+   11. OPCIONES DE RESPUESTA
+========================================== */
+
+.options-container {
+    display: grid;
+    gap: 12px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.option:hover {
+    border-color: var(--primary);
+    background: #f6faff;
+}
+
+.option.selected {
+    border: 2px solid var(--primary);
+    background: #edf4ff;
+}
+
+.option input {
+    accent-color: var(--primary);
+
+    width: 18px;
+    height: 18px;
+
+    cursor: pointer;
+}
+
+.option span {
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   12. BOTONES
+========================================== */
+
+button {
+    border: none;
+    border-radius: 11px;
+
+    padding: 15px 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:focus-visible {
+    outline: 3px solid #86baff;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.primary-button {
+    background: var(--primary);
+    color: white;
+}
+
+.primary-button:hover:not(:disabled) {
+    background: var(--primary-dark);
+}
+
+.secondary-button {
+    background: #edf4ff;
+    color: var(--primary);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.navigation button {
+    flex: 1;
+}
+
+.selection-message {
+    min-height: 18px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   13. PANEL DE CONSEJOS
+========================================== */
+
+.tip-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+
+    color: var(--primary);
+}
+
+.tip-icon {
+    font-size: 30px;
+}
+
+.tip-header small {
+    display: block;
+    margin-top: 5px;
+
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.tip-card p {
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-top: 22px;
+}
+
+.tip-card .encouragement {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   14. RESULTADOS
+========================================== */
+
+.result-icon {
+    text-align: center;
+    font-size: 55px;
+    margin-top: 25px;
+}
+
+.score-card {
+    background: #f7f9fc;
+
+    padding: 22px;
+    border-radius: 15px;
+
+    margin: 25px 0;
+}
+
+.score-card strong {
+    display: block;
+
+    color: var(--primary);
+    font-size: 35px;
+
+    margin: 12px 0;
+}
+
+.area-result {
+    margin: 18px 0;
+}
+
+.area-result-header {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.area-result-track {
+    height: 9px;
+    background: #e8edf3;
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.area-result-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 20px;
+}
+
+.diagnosis-box {
+    background: #edf4ff;
+
+    padding: 20px;
+    border-radius: 15px;
+
+    margin: 25px 0;
+}
+
+.diagnosis-box p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   15. ADAPTACIÓN A DISPOSITIVOS MÓVILES
+========================================== */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .main-card {
+        padding: 22px;
+    }
+
+    .tip-card {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .question-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+}
