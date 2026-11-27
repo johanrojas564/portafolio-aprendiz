@@ -1,0 +1,284 @@
+
+/* ==================================================
+   1. CONFIGURACIÓN GENERAL
+   ================================================== */
+
+/* Elimina márgenes y rellenos predeterminados.
+   También facilita el cálculo de dimensiones. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración general del documento */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #252525;
+}
+
+
+/* ==================================================
+   2. CONTENEDOR PRINCIPAL
+   ================================================== */
+
+/* Ocupa toda la pantalla y centra la tarjeta
+   tanto horizontal como verticalmente. */
+.results-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+}
+
+
+/* ==================================================
+   3. TARJETA DE RESULTADOS
+   ================================================== */
+
+/* Contenedor blanco que agrupa toda la información.
+   max-width mantiene el tamaño del diseño de Figma. */
+.results-card {
+    width: 100%;
+
+    /* Mayor amplitud de la tarjeta */
+    max-width: 520px;
+
+    /* Más espacio interior */
+    padding: 40px;
+
+    background-color: #ffffff;
+
+    /* Borde suave */
+    border: 1px solid #e8edf2;
+    border-radius: 20px;
+
+    /* Sombra sutil para dar profundidad */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   4. ENCABEZADO Y FELICITACIÓN
+   ================================================== */
+
+/* Área superior de la tarjeta */
+.results-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Círculo de fondo del icono */
+.trophy-container {
+    width: 68px;
+    height: 68px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff3df;
+    border-radius: 50%;
+}
+
+/* Tamaño del icono */
+.trophy-icon {
+    font-size: 32px;
+}
+
+/* Título principal */
+.results-title {
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+/* Mensaje de felicitación */
+.results-message {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #888888;
+
+    margin-bottom: 26px;
+}
+
+/* ==================================================
+   5. ESTADÍSTICAS DE LA LECCIÓN
+   ================================================== */
+
+/* Distribuye las tres tarjetas en columnas iguales */
+.results-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+/* Estilo general de cada tarjeta */
+.stat-card {
+    padding: 16px 12px;
+
+    border: 1px solid #e9e9e9;
+    border-radius: 9px;
+
+    text-align: left;
+}
+
+/* Etiqueta de cada estadística */
+.stat-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    color: #777777;
+}
+
+/* Círculo de color que acompaña cada etiqueta */
+.stat-indicator {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+}
+
+
+/* Colores para respuestas correctas */
+.stat-card--success .stat-indicator {
+    color: #35ae50;
+    background-color: #e5f7e9;
+}
+
+/* Colores para respuestas incorrectas */
+.stat-card--error .stat-indicator {
+    color: #ff5252;
+    background-color: #ffe8e8;
+}
+
+/* Colores para el tiempo */
+.stat-card--time .stat-indicator {
+    color: #ff9900;
+    background-color: #fff1d9;
+}
+
+/* Número o valor de cada estadística */
+.stat-value {
+    font-size: 19px;
+    font-weight: 700;
+    color: #222222;
+}
+
+/* ==================================================
+   6. BOTÓN SIGUIENTE
+   ================================================== */
+
+/* Área inferior de la tarjeta */
+.results-footer {
+    width: 100%;
+}
+
+/* Botón para continuar con el aprendizaje */
+.next-button {
+    width: 100%;
+    min-height: 44px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #49b451;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+/* Efecto cuando el cursor pasa sobre el botón */
+.next-button:hover {
+    background-color: #399c42;
+}
+
+/* Indicador visual al navegar con teclado */
+.next-button:focus-visible {
+    outline: 2px solid #237b2d;
+    outline-offset: 3px;
+}
+
+
+/* ==================================================
+   7. DISEÑO RESPONSIVE
+   ================================================== */
+
+/* Ajustes para pantallas medianas  */
+@media (max-width: 600px) {
+
+    .results-card {
+        max-width: 100%;
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    .results-title {
+        font-size: 19px;
+    }
+
+    .results-message {
+        font-size: 11px;
+    }
+
+    .stat-card {
+        padding: 12px 8px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+    .stat-value {
+        font-size: 17px;
+    }
+
+}
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 350px) {
+
+    .results-stats {
+        gap: 6px;
+    }
+
+    .stat-card {
+        padding: 10px 6px;
+    }
+
+    .stat-label {
+        font-size: 9px;
+        gap: 4px;
+    }
+
+}

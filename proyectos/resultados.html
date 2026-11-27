@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña del navegador -->
+    <title>Resultados de la lección</title>
+
+    <!-- Hoja de estilos de la pantalla de resultados -->
+    <link rel="stylesheet" href="resultados.css">
+</head>
+
+<body>
+
+    <!-- Contenedor principal de la pantalla -->
+    <main class="results-page">
+
+        <!-- Tarjeta que contiene todos los resultados -->
+        <section class="results-card"
+                 aria-labelledby="results-title">
+
+            <!-- Encabezado de felicitación -->
+            <header class="results-header">
+
+                <!-- Icono decorativo de trofeo -->
+                <div class="trophy-container" aria-hidden="true">
+                    <span class="trophy-icon">🏆</span>
+                </div>
+
+                <!-- Título principal de la pantalla -->
+                <h1 class="results-title" id="results-title">
+                    ¡Felicidades! Completaste la lección
+                </h1>
+
+                <!-- Mensaje de reconocimiento al estudiante -->
+                <p class="results-message">
+                    ¡Has hecho un gran trabajo!
+                </p>
+
+            </header>
+
+
+            <!-- Sección de estadísticas de la lección -->
+            <section class="results-stats"
+                     aria-label="Estadísticas de la lección">
+
+                <!-- Tarjeta de respuestas correctas -->
+                <article class="stat-card stat-card--success">
+
+                    <h2 class="stat-label">
+                        <span class="stat-indicator"
+                              aria-hidden="true">✓</span>
+                        Aciertos
+                    </h2>
+
+                    <p class="stat-value" id="correctAnswers">
+                        14
+                    </p>
+
+                </article>
+
+
+                <!-- Tarjeta de respuestas incorrectas -->
+                <article class="stat-card stat-card--error">
+
+                    <h2 class="stat-label">
+                        <span class="stat-indicator"
+                              aria-hidden="true">!</span>
+                        Fallos
+                    </h2>
+
+                    <p class="stat-value" id="wrongAnswers">
+                        1
+                    </p>
+
+                </article>
+
+
+                <!-- Tarjeta de tiempo empleado -->
+                <article class="stat-card stat-card--time">
+
+                    <h2 class="stat-label">
+                        <span class="stat-indicator"
+                              aria-hidden="true">◷</span>
+                        Tiempo
+                    </h2>
+
+                    <p class="stat-value" id="lessonTime">
+                        55:00
+                    </p>
+
+                </article>
+
+            </section>
+
+
+            <!-- Acción para continuar después de finalizar -->
+            <footer class="results-footer">
+
+                <button
+                    type="button"
+                    class="next-button"
+                    id="nextButton">
+
+                    <span class="button-icon" aria-hidden="true">
+                        ⌂
+                    </span>
+
+                    <span>Siguiente</span>
+
+                </button>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+    <!-- JavaScript de la pantalla de resultados -->
+    <script src="js/resultados.js" defer></script>
+
+</body>
+</html>
