@@ -1,0 +1,511 @@
+
+/* =========================================
+   VARIABLES GENERALES
+========================================= */
+
+:root {
+    --color-primary: #1675e8;
+    --color-primary-hover: #0964ce;
+
+    --color-background: #f4f7fb;
+    --color-card: #ffffff;
+
+    --color-text: #242424;
+    --color-text-secondary: #777777;
+
+    --color-border: #e6e8ec;
+    --color-locked: #d9dce1;
+
+    --font-family: Arial, Helvetica, sans-serif;
+
+    --radius-card: 13px;
+    --radius-button: 7px;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--color-background);
+    color: var(--color-text);
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.course-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 28px 25px 40px;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.course-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--color-text);
+    flex-shrink: 0;
+}
+
+.back-button:hover {
+    background: #edf4ff;
+}
+
+.course-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.course-category {
+    font-size: 9px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.course-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PROGRESO DEL MÓDULO
+========================================= */
+
+.course-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-label {
+    font-size: 11px;
+    color: #555;
+    white-space: nowrap;
+}
+
+.progress-label strong {
+    font-weight: 700;
+}
+
+.progress-track {
+    width: 110px;
+    height: 5px;
+    background: #dddddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+
+/* =========================================
+   GRID DE LECCIONES
+========================================= */
+
+.lessons-section {
+    width: 100%;
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+
+/* =========================================
+   TARJETAS DE LECCIONES
+========================================= */
+
+.lesson-card {
+    min-height: 230px;
+    padding: 16px 14px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.lesson-card--available {
+    border: 1.5px solid var(--color-primary);
+}
+
+.lesson-card--locked {
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   ICONOS DE LECCIONES
+========================================= */
+
+.lesson-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f8f9fb;
+    border: 1.5px solid #dddddd;
+
+    flex-shrink: 0;
+}
+
+.lesson-card--available .lesson-icon {
+    background: #edf5ff;
+    border: 1.5px solid var(--color-primary);
+}
+
+.star-icon {
+    font-size: 30px;
+    line-height: 1;
+    color: #777777;
+}
+
+.lesson-card--available .star-icon {
+    color: var(--color-primary);
+}
+
+
+/* =========================================
+   CONTENIDO DE LECCIONES
+========================================= */
+
+.lesson-content {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.lesson-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 6px;
+}
+
+.lesson-description {
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    max-width: 190px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   BOTONES DE LECCIONES
+========================================= */
+
+.lesson-button {
+    width: 100%;
+    min-height: 31px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: var(--radius-button);
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+button.lesson-button {
+    cursor: pointer;
+}
+
+.lesson-card--available .lesson-button {
+    background: var(--color-primary);
+    color: white;
+}
+
+.lesson-card--available .lesson-button:hover {
+    background: var(--color-primary-hover);
+}
+
+.lesson-button--locked {
+    background: #f8f9fa;
+    color: #777777;
+    border: 1px solid #e9eaed;
+    cursor: not-allowed;
+}
+
+.lock-icon {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   EVALUACIÓN FINAL
+========================================= */
+
+.evaluation-section {
+    margin-top: 25px;
+}
+
+.evaluation-card {
+    width: 100%;
+    padding: 20px 24px;
+
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.evaluation-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.evaluation-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #f3f5f8;
+    border: 1px solid #dfe2e7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    color: #888888;
+}
+
+.evaluation-tag {
+    display: inline-block;
+    color: var(--color-primary);
+    font-size: 9px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.evaluation-content h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.evaluation-content p {
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+
+.evaluation-button {
+    min-width: 190px;
+    min-height: 38px;
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-button);
+
+    background: #f7f8fa;
+    color: #777777;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: not-allowed;
+}
+
+.evaluation-button:disabled {
+    opacity: 1;
+}
+
+
+/* =========================================
+   EVALUACIÓN DESBLOQUEADA
+   Preparado para conectar con JavaScript
+========================================= */
+
+.evaluation-card[data-status="available"] {
+    border-color: var(--color-primary);
+}
+
+.evaluation-card[data-status="available"] .evaluation-icon {
+    background: #edf5ff;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.evaluation-button:not(:disabled) {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE: TABLETS
+========================================= */
+
+@media (max-width: 850px) {
+
+    .course-container {
+        padding: 25px 20px;
+    }
+
+    .lessons-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .lesson-card {
+        min-height: 230px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE: MÓVILES
+========================================= */
+
+@media (max-width: 550px) {
+
+    .course-container {
+        padding: 20px 15px 30px;
+    }
+
+    .course-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .course-title {
+        font-size: 19px;
+    }
+
+    .course-progress {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .progress-track {
+        flex: 1;
+        max-width: 150px;
+    }
+
+    .lessons-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .lesson-card {
+        min-height: 210px;
+        padding: 18px;
+    }
+
+    .lesson-title {
+        font-size: 15px;
+    }
+
+    .lesson-description {
+        font-size: 11px;
+    }
+
+    .evaluation-card {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 18px;
+    }
+
+    .evaluation-info {
+        align-items: flex-start;
+    }
+
+    .evaluation-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+button:focus-visible {
+    outline: 3px solid rgba(22, 117, 232, 0.35);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
