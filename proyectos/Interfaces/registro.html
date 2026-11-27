@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Cuenta - JAD Mathy</title>
+  <link rel="stylesheet" href="estilos/estilos_registros.css">
+</head>
+
+<body>
+
+  <div class="element-login-light element-register-light"
+       data-model-id="registro">
+
+    <!-- PANEL IZQUIERDO: IDENTIDAD DE MATHY -->
+    <aside class="brand-banner" aria-label="Información de bienvenida">
+
+      <!-- Decoraciones matemáticas -->
+      <div class="math-decorations" aria-hidden="true">
+        <div class="math-badge plus">+</div>
+        <div class="math-badge minus">-</div>
+        <div class="math-badge divide">÷</div>
+        <div class="math-badge multiply">×</div>
+        <div class="math-badge pi">π</div>
+      </div>
+
+      <!-- Presentación de la plataforma -->
+      <section class="brand-content">
+
+        <img
+          class="brand-logo"
+          src="img/LOGO MATHY VERTICAL_SIN FONDO.webp"
+          alt="Logo de Mathy"
+        >
+
+        <h1 class="brand-title">
+          ¡Aprender matemáticas nunca fue tan divertido!
+        </h1>
+
+        <p class="brand-description">
+          Explora desafíos interactivos, medallas increíbles
+          y sube de nivel junto a Mathy el zorro matemático.
+          Pensado para jóvenes de 8 a 15 años.
+        </p>
+
+      </section>
+
+      <!-- Etiquetas informativas -->
+      <div class="brand-tags">
+        <span class="tag">Edad 8-15 años</span>
+        <span class="brand-tag-text">
+          Metodología gamificada certificada
+        </span>
+      </div>
+
+    </aside>
+
+
+    <!-- PANEL DERECHO: REGISTRO -->
+    <main class="login-container register-container">
+
+      <!-- Encabezado -->
+      <header class="register-header">
+
+        <img
+          class="form-header-logo"
+          src="img/LOGO-MATHY-ORIGINAL_SINFONDO-.webp"
+          alt="Isotipo de JAD Mathy"
+        >
+
+        <div class="form-title-group">
+
+          <h2 class="form-title">
+            BIENVENIDO REGÍSTRATE - Crea tu cuenta en Mathy
+          </h2>
+
+          <p class="form-subtitle">
+            Únete y compite sanamente resolviendo entretenidos
+            problemas matemáticos.
+          </p>
+
+        </div>
+
+      </header>
+
+
+      <!-- Formulario de registro -->
+      <form class="login-form register-form">
+
+        <!-- Nombre de Nick -->
+        <div class="input-group">
+          <label class="input-label" for="nickname">
+            Nombre de Nick
+          </label>
+
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="nickname"
+              class="text-input"
+              placeholder="MathMag099"
+              required
+            >
+          </div>
+        </div>
+
+
+        <!-- Fecha de nacimiento -->
+        <div class="input-group">
+          <label class="input-label" for="birthdate">
+            Fecha de nacimiento
+          </label>
+
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="birthdate"
+              class="text-input"
+              placeholder="12/04/2012"
+              required
+            >
+          </div>
+        </div>
+
+
+        <!-- Correo electrónico -->
+        <div class="input-group">
+          <label class="input-label" for="email">
+            Correo
+          </label>
+
+          <div class="input-wrapper">
+            <input
+              type="email"
+              id="email"
+              class="text-input"
+              placeholder="estudiante@mathy.com"
+              required
+            >
+          </div>
+        </div>
+
+
+        <!-- Verificación de correo -->
+        <div class="input-group">
+          <label class="input-label" for="confirm-email">
+            Verificar correo
+          </label>
+
+          <div class="input-wrapper">
+            <input
+              type="email"
+              id="confirm-email"
+              class="text-input"
+              placeholder="estudiante@mathy.com"
+              required
+            >
+          </div>
+        </div>
+
+
+        <!-- Contraseña -->
+        <div class="input-group">
+          <label class="input-label" for="password">
+            Contraseña
+          </label>
+
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="password"
+              class="text-input"
+              placeholder="********"
+              required
+            >
+
+            <img
+              class="input-icon"
+              src="https://c.animaapp.com/QOnBXDNZ/img/eye.svg"
+              alt="Mostrar contraseña"
+            >
+          </div>
+        </div>
+
+
+        <!-- Verificación de contraseña -->
+        <div class="input-group">
+          <label class="input-label" for="confirm-password">
+            Verificar contraseña
+          </label>
+
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="confirm-password"
+              class="text-input"
+              placeholder="********"
+              required
+            >
+
+            <img
+              class="input-icon"
+              src="https://c.animaapp.com/QOnBXDNZ/img/eye.svg"
+              alt="Mostrar contraseña"
+            >
+          </div>
+        </div>
+
+
+        <!-- Aceptación de condiciones -->
+        <div class="terms-container">
+
+          <label class="terms-option">
+            <input type="checkbox" required>
+            <span>
+              Acepto los términos de servicio
+            </span>
+          </label>
+
+          <label class="terms-option">
+            <input type="checkbox" required>
+            <span>
+              He leído y acepto la Política de privacidad
+            </span>
+          </label>
+
+        </div>
+
+
+        <!-- Botón de registro -->
+        <button type="submit" class="btn-primary">
+          Crear Cuenta
+        </button>
+
+      </form>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
